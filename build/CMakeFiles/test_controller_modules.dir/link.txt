@@ -1,2 +1,0 @@
-C:\MinGW\bin\ar.exe qc libtest_controller_modules.a CMakeFiles/test_controller_modules.dir/src/controller.c.obj CMakeFiles/test_controller_modules.dir/src/avoidance.c.obj
-C:\MinGW\bin\ranlib.exe libtest_controller_modules.a

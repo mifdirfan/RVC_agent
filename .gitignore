@@ -1,0 +1,19 @@
+# Build output
+build/
+bin/
+*.o
+*.d
+*.a
+*.exe
+
+# Coverage
+*.gcno
+*.gcda
+*.gcov
+coverage/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+__pycache__/

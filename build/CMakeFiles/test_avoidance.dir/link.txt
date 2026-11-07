@@ -1,3 +1,0 @@
-"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\test_avoidance.dir/objects.a
-C:\MinGW\bin\ar.exe qc CMakeFiles\test_avoidance.dir/objects.a @CMakeFiles\test_avoidance.dir\objects1.rsp
-C:\MinGW\bin\g++.exe --coverage -Wl,--whole-archive CMakeFiles\test_avoidance.dir/objects.a -Wl,--no-whole-archive -o test_avoidance.exe -Wl,--out-implib,libtest_avoidance.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\test_avoidance.dir\linkLibs.rsp

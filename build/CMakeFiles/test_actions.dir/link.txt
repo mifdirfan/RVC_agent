@@ -1,3 +1,0 @@
-"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\test_actions.dir/objects.a
-C:\MinGW\bin\ar.exe qc CMakeFiles\test_actions.dir/objects.a @CMakeFiles\test_actions.dir\objects1.rsp
-C:\MinGW\bin\g++.exe --coverage -Wl,--whole-archive CMakeFiles\test_actions.dir/objects.a -Wl,--no-whole-archive -o test_actions.exe -Wl,--out-implib,libtest_actions.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\test_actions.dir\linkLibs.rsp

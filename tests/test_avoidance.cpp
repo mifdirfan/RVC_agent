@@ -1,5 +1,5 @@
 // Decide Avoidance: left first (C4), backward when both sides blocked (R4).
-// Test plan: AV-01 .. AV-04.
+// Unit test cases (artifacts/TDD/unit_test_cases.md): AV-01 .. AV-04.
 #include <gtest/gtest.h>
 
 extern "C" {

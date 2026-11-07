@@ -1,6 +1,6 @@
 # Module Traceability (SD → Implementation)
 
-Sources: `artifacts/SD/structure_chart.md` (SC, approved 2026-11-08), `artifacts/SD/transform_analysis.md`, `artifacts/SA/DFD/dfd_level_4_fsm.md`, `artifacts/SA/process_specification.md`, `artifacts/SA/data_dictionary.md`, `clarifications.md`, `.claude/rules/c-coding.md`.
+Sources: `artifacts/SD/structure_chart.md` (SC, approved 2026-11-08), `artifacts/SD/transform_analysis.md`, `artifacts/SA/DFD/dfd_level_4_fsm.md`, `artifacts/SA/process_specification.md`, `artifacts/SA/data_dictionary.md`, `docs/clarifications.md`, `.claude/rules/c-coding.md`.
 
 ## 1. Module → File → Function Mapping
 

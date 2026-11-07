@@ -1,5 +1,5 @@
 // Library modules Motor Interface (2.2) and Cleaner Interface (2.3): C12 compare-and-send.
-// Test plan: INIT-03, INIT-04, C12-01 .. C12-07.
+// Unit test cases (artifacts/TDD/unit_test_cases.md): INIT-03, INIT-04, C12-01 .. C12-07.
 #include <gtest/gtest.h>
 #include <vector>
 

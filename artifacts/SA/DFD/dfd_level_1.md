@@ -1,6 +1,6 @@
 # DFD Level 1: RVC Control Decomposition
 
-Sources: `preliminary_requirements.md` (R1–R7), `clarifications.md` (C1–C28), `artifacts/SA/event_list.md`, `artifacts/SA/context_diagram.md`, `artifacts/SA/data_dictionary.md`, `artifacts/SA/DFD/dfd_level_0.md`, `artifacts/SA/process_specification.md`.
+Sources: `docs/preliminary_requirements.md` (R1–R7), `docs/clarifications.md` (C1–C28), `artifacts/SA/event_list.md`, `artifacts/SA/context_diagram.md`, `artifacts/SA/data_dictionary.md`, `artifacts/SA/DFD/dfd_level_0.md`, `artifacts/SA/process_specification.md`.
 
 ## Purpose
 Level 1 splits **0 RVC Control** into its two major functions, following the reference decomposition in the `sa-dfd` skill:

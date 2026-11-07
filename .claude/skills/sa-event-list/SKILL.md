@@ -6,8 +6,8 @@ description: Generate an Event List from preliminary requirements for Structured
 # Event List Generation
 
 ## Input
-- preliminary_requirements.md
-- clarifications.md
+- docs/preliminary_requirements.md
+- docs/clarifications.md
 
 ## Procedure
 1. Read the preliminary requirements.

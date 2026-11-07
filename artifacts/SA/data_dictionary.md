@@ -1,6 +1,6 @@
 # Data Dictionary
 
-Sources: `preliminary_requirements.md` (lines cited as R1–R7), `clarifications.md` (C1–C28), `artifacts/SA/event_list.md`, `artifacts/SA/context_diagram.md`, `artifacts/SA/DFD/dfd_level_0.md`, `artifacts/SA/DFD/dfd_level_1.md`, `artifacts/SA/DFD/dfd_level_2.md`, `artifacts/SA/DFD/dfd_level_3.md`, `artifacts/SA/DFD/dfd_level_4_fsm.md` (read for consistency only), `artifacts/SA/process_specification.md` (Rev 7).
+Sources: `docs/preliminary_requirements.md` (lines cited as R1–R7), `docs/clarifications.md` (C1–C28), `artifacts/SA/event_list.md`, `artifacts/SA/context_diagram.md`, `artifacts/SA/DFD/dfd_level_0.md`, `artifacts/SA/DFD/dfd_level_1.md`, `artifacts/SA/DFD/dfd_level_2.md`, `artifacts/SA/DFD/dfd_level_3.md`, `artifacts/SA/DFD/dfd_level_4_fsm.md` (read for consistency only), `artifacts/SA/process_specification.md` (Rev 7).
 
 ## Revision History
 

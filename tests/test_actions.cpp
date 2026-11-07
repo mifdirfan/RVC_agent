@@ -1,5 +1,5 @@
 // Efferent action modules 2.1.2 .. 2.1.8 (C24, C25).
-// Test plan: INIT-05, INIT-06, ACT-01 .. ACT-09.
+// Unit test cases (artifacts/TDD/unit_test_cases.md): INIT-05, INIT-06, ACT-01 .. ACT-09.
 #include <gtest/gtest.h>
 
 extern "C" {

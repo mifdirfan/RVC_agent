@@ -1,6 +1,6 @@
 # DFD Level 3: Decomposition of Process 2.1 Main Control
 
-Sources: `preliminary_requirements.md` (R1–R7), `clarifications.md` (C1–C28), `artifacts/SA/event_list.md`, `artifacts/SA/context_diagram.md`, `artifacts/SA/data_dictionary.md` (generated from Rev 5; text re-checked against Rev 8), `artifacts/SA/DFD/dfd_level_0.md`, `artifacts/SA/DFD/dfd_level_1.md`, `artifacts/SA/DFD/dfd_level_2.md`, `artifacts/SA/process_specification.md`.
+Sources: `docs/preliminary_requirements.md` (R1–R7), `docs/clarifications.md` (C1–C28), `artifacts/SA/event_list.md`, `artifacts/SA/context_diagram.md`, `artifacts/SA/data_dictionary.md` (generated from Rev 5; text re-checked against Rev 8), `artifacts/SA/DFD/dfd_level_0.md`, `artifacts/SA/DFD/dfd_level_1.md`, `artifacts/SA/DFD/dfd_level_2.md`, `artifacts/SA/process_specification.md`.
 
 ## Purpose
 Level 3 refines **2.1 Main Control** only, following the reference decomposition in the `sa-dfd` skill. It separates control from data processing:

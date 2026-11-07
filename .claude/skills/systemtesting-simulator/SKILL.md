@@ -6,7 +6,7 @@ description: Build and validate a web-based RVC simulator with an editable 10x10
 # Web-Based RVC System Testing
 
 ## Inputs
-- clarifications.md
+- docs/clarifications.md
 - artifacts/SA/DFD/dfd_level_4_fsm.md
 - artifacts/SA/event_list.md
 - artifacts/SA/process_specification.md
@@ -14,7 +14,7 @@ description: Build and validate a web-based RVC simulator with an editable 10x10
 - artifacts/SD/structure_chart.md
 - include/rvc.h, include/rvc_port.h, include/front_sensor.h, include/rvc_types.h
 - src/ (approved implementation, 84/84 tests passing)
-- artifacts/Implementation/test_report.md
+- artifacts/TDD/test_execution_results.md
 
 ## Objective
 Develop a web-based simulator to visualize

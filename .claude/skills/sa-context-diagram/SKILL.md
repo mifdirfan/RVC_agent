@@ -6,8 +6,8 @@ description: Generate a Mermaid System Context Diagram using preliminary require
 # System Context Diagram Generation
 
 ## Input
-- preliminary_requirements.md
-- clarifications.md
+- docs/preliminary_requirements.md
+- docs/clarifications.md
 - artifacts/SA/event_list.md
 
 ## Procedure

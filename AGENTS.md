@@ -30,7 +30,7 @@
 ## Structured Analysis Guidelines
 - Generate SA artifacts using the corresponding skills.
 - Generate the Event List before the System Context Diagram.
-- Use preliminary_requirements.md as the primary source.
+- Use docs/preliminary_requirements.md as the primary source.
 - Ensure consistency between related SA artifacts.
 - Do not invent requirements or unsupported behavior.
 - Save all SA artifacts under artifacts/SA/.
@@ -47,7 +47,7 @@
 
 
 ## Structured Analysis Constraints
-- Use `preliminary_requirements.md` as the primary source.
+- Use `docs/preliminary_requirements.md` as the primary source.
 - Preserve consistency between the Event List and Context Diagram.
 - Maintain DFD balancing between adjacent levels.
 - Use consistent process numbering and flow names.

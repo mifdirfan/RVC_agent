@@ -1,6 +1,6 @@
 # SA Consistency Report
 
-Sources: `preliminary_requirements.md` (R1–R7), `clarifications.md` (C1–C29), and every SA artifact under `artifacts/SA/`:
+Sources: `docs/preliminary_requirements.md` (R1–R7), `docs/clarifications.md` (C1–C29), and every SA artifact under `artifacts/SA/`:
 
 | Artifact | Revision checked |
 |---|---|

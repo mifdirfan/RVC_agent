@@ -1,6 +1,6 @@
 # Event List
 
-Sources: `preliminary_requirements.md` (lines cited as R1–R7) and `clarifications.md` (cited as C1–C28).
+Sources: `docs/preliminary_requirements.md` (lines cited as R1–R7) and `docs/clarifications.md` (cited as C1–C28).
 
 ## Revision History
 

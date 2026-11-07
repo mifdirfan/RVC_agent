@@ -1,7 +1,7 @@
 // RVC System through the same entry points as main(): rvc_startup() and rvc_tick().
 // All production modules are linked; only the environment ports are doubles.
 // Asserts the exact Direction / Clean write sequence and count (TDD rule 8).
-// Test plan: INIT-08, SYS-01 .. SYS-10.
+// Unit test cases (artifacts/TDD/unit_test_cases.md): INIT-08, SYS-01 .. SYS-10.
 #include <gtest/gtest.h>
 #include <vector>
 #include <utility>

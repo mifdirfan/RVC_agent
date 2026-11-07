@@ -6,7 +6,7 @@ description: Perform requirement-driven TDD for RVC.
 # TDD Development
 
 ## Inputs
-- clarifications.md
+- docs/clarifications.md
 - artifacts/SA/DFD/dfd_level_4_fsm.md   
 - artifacts/SA/process_specification.md
 - artifacts/SA/data_dictionary.md
@@ -31,7 +31,7 @@ description: Perform requirement-driven TDD for RVC.
    Process Specifications.
 5. Define expected outputs for each test.
 6. Maintain requirement-to-test traceability.
-7. Write tests/TEST_PLAN.md first: one row per FSM transition T1-T25, plus C12 (no duplicate
+7. Write artifacts/TDD/unit_test_cases.md first: one row per FSM transition T1-T25, plus C12 (no duplicate
    sends), C13, C14, C28, C29, counter saturation, and each module's init.
 8. Test doubles for the six rvc_port_* functions record every Direction/Clean write in order,
    so tests assert the exact command sequence and count.
@@ -63,7 +63,7 @@ description: Perform requirement-driven TDD for RVC.
 - Measure branch coverage.
 - Identify uncovered code.
 - Add tests for missing behaviors.
-- Generate a coverage report.
+- Generate a coverage report (artifacts/TDD/coverage_report.md).
 
 ## Completion Criteria
 - All required tests pass.

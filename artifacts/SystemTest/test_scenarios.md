@@ -1,6 +1,6 @@
 # RVC System Test Scenarios
 
-Generated from `simulator/scenario_defs.py` by `simulator/generate.py`. Sources: `preliminary_requirements.md` (R1-R7), `clarifications.md` (C1-C29), `artifacts/SA/DFD/dfd_level_4_fsm.md` (T1-T25), `artifacts/SA/event_list.md`, `artifacts/SA/process_specification.md`.
+Generated from `simulator/scenario_defs.py` by `simulator/generate.py`. Sources: `docs/preliminary_requirements.md` (R1-R7), `docs/clarifications.md` (C1-C29), `artifacts/SA/DFD/dfd_level_4_fsm.md` (T1-T25), `artifacts/SA/event_list.md`, `artifacts/SA/process_specification.md`.
 
 ## 1. Test Design Policy
 

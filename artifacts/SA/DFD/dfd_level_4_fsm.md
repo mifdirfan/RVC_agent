@@ -1,6 +1,6 @@
 # DFD Level 4: Controller FSM (Process 2.1.1 Controller)
 
-Sources: `preliminary_requirements.md` (R1–R7), `clarifications.md` (C1–C29), `artifacts/SA/DFD/dfd_level_3.md` (Controller Interface, Signal Type Rules, Signals per situation S0–S9), `artifacts/SA/data_dictionary.md` (Sections 2.1, 4.5, 4.6), `artifacts/SA/process_specification.md` (Processes 2.1 and 2.1.1).
+Sources: `docs/preliminary_requirements.md` (R1–R7), `docs/clarifications.md` (C1–C29), `artifacts/SA/DFD/dfd_level_3.md` (Controller Interface, Signal Type Rules, Signals per situation S0–S9), `artifacts/SA/data_dictionary.md` (Sections 2.1, 4.5, 4.6), `artifacts/SA/process_specification.md` (Processes 2.1 and 2.1.1).
 
 ## Purpose
 Level 4 describes **2.1.1 Controller**, the only control process at Level 3, as a finite state machine. The FSM uses only the Controller's Level 3 interface:

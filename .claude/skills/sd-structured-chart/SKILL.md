@@ -6,8 +6,8 @@ description: Perform Structured Design using approved Structured Analysis artifa
 # Structured Design
 
 ## Inputs
-- preliminary_requirements.md
-- clarifications.md
+- docs/preliminary_requirements.md
+- docs/clarifications.md
 - artifacts/SA/event_list.md
 - artifacts/SA/context_diagram.md
 - artifacts/SA/data_dictionary.md

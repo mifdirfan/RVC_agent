@@ -1,6 +1,6 @@
 # DFD Level 0: RVC Control
 
-Sources: `preliminary_requirements.md` (R1–R7), `clarifications.md` (C1–C28), `artifacts/SA/event_list.md`, `artifacts/SA/context_diagram.md`.
+Sources: `docs/preliminary_requirements.md` (R1–R7), `docs/clarifications.md` (C1–C28), `artifacts/SA/event_list.md`, `artifacts/SA/context_diagram.md`.
 
 ## Purpose
 Level 0 shows the whole system as one process, **0 RVC Control**, with the same external entities and flows as the System Context Diagram. It is the root of the functional decomposition. It has no internal processes or data stores.

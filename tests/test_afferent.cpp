@@ -1,5 +1,5 @@
 // Afferent branch (Process 1): sensor interfaces, store modules, Detect Obstacle & Dust.
-// Test plan: INIT-01, INIT-02, AFF-01 .. AFF-09.
+// Unit test cases (artifacts/TDD/unit_test_cases.md): INIT-01, INIT-02, AFF-01 .. AFF-09.
 #include <gtest/gtest.h>
 
 extern "C" {

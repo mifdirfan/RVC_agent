@@ -1,6 +1,6 @@
 # DFD Level 2: Decomposition of Processes 1 and 2
 
-Sources: `preliminary_requirements.md` (R1–R7), `clarifications.md` (C1–C28), `artifacts/SA/event_list.md`, `artifacts/SA/context_diagram.md`, `artifacts/SA/data_dictionary.md` (generated from Rev 3; text re-checked against Rev 8), `artifacts/SA/DFD/dfd_level_0.md`, `artifacts/SA/DFD/dfd_level_1.md`, `artifacts/SA/process_specification.md` (generated from Rev 2; text re-checked against Rev 7).
+Sources: `docs/preliminary_requirements.md` (R1–R7), `docs/clarifications.md` (C1–C28), `artifacts/SA/event_list.md`, `artifacts/SA/context_diagram.md`, `artifacts/SA/data_dictionary.md` (generated from Rev 3; text re-checked against Rev 8), `artifacts/SA/DFD/dfd_level_0.md`, `artifacts/SA/DFD/dfd_level_1.md`, `artifacts/SA/process_specification.md` (generated from Rev 2; text re-checked against Rev 7).
 
 ## Purpose
 Level 2 refines both Level 1 processes, following the reference decomposition in the `sa-dfd` skill. Each parent has its own diagram.

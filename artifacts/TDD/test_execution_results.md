@@ -1,6 +1,6 @@
-# Unit Test Report
+# Test Execution Results
 
-Date: 2026-11-08. Test plan: `tests/TEST_PLAN.md`. Raw logs: `artifacts/Implementation/logs/`.
+Date: 2026-11-08. Test cases: `artifacts/TDD/unit_test_cases.md`. Coverage: `artifacts/TDD/coverage_report.md`. Raw logs: `artifacts/TDD/logs/`.
 
 ## 1. Environment
 
@@ -11,7 +11,6 @@ Date: 2026-11-08. Test plan: `tests/TEST_PLAN.md`. Raw logs: `artifacts/Implemen
 | Build | CMake 4.4.4, generator "MinGW Makefiles" |
 | Test framework | GoogleTest v1.14.0 (FetchContent) |
 | Test runner | CTest |
-| Coverage | gcov (`--coverage -O0`, C production code only) + gcovr 8.8 |
 | Warnings | `-Wall -Wextra -Wpedantic -Werror` on all C code (clean) |
 
 How to reproduce:
@@ -20,10 +19,9 @@ How to reproduce:
 cmake -S . -B build -G "MinGW Makefiles" -DCMAKE_C_COMPILER=gcc -DCMAKE_CXX_COMPILER=g++
 cmake --build build -j 8
 ctest --test-dir build --output-on-failure
-python -m gcovr -r . --filter src/ --exclude src/main.c --txt-metric branch build
 ```
 
-## 2. Test Execution Result (final run, `logs/ctest_final.log`)
+## 2. Test Execution Result (final run, `artifacts/TDD/logs/ctest_final.log`)
 
 **84 / 84 passed, 0 failed.**
 
@@ -52,11 +50,11 @@ All 25 transitions have a dedicated test, `Controller.T<n>_*`. Each one asserts 
 
 ## 3. TDD Cycle Log (Red → Green → Refactor)
 
-The test files for all groups were written first, from `TEST_PLAN.md`, against stub modules that compile but do nothing. So the RED step for every group comes from the baseline run, and each group was then implemented and turned GREEN one at a time.
+The test files for all groups were written first, from `unit_test_cases.md`, against stub modules that compile but do nothing. So the RED step for every group comes from the baseline run, and each group was then implemented and turned GREEN one at a time.
 
 | Cycle | Group | RED (tests failing for the expected reason) | GREEN | REFACTOR |
 |---|---|---|---|---|
-| 0 | Baseline (all stubs) | 84 tests: 81 failed, 3 passed (`logs/00_red_baseline.log`). The 3 passes are "nothing happens" or default-value cases that the stubs satisfy: INIT05_06, AV04 (stub returns BACKWARD), SYS09 | — | — |
+| 0 | Baseline (all stubs) | 84 tests: 81 failed, 3 passed (`artifacts/TDD/logs/00_red_baseline.log`). The 3 passes are "nothing happens" or default-value cases that the stubs satisfy: INIT05_06, AV04 (stub returns BACKWARD), SYS09 | — | — |
 | 1 | G1 Afferent (sensors, stores, Detect) | 11 / 11 failed: wrong store values, 0 port reads | 11 / 11 pass | none needed |
 | 2 | G2 Motor / Cleaner Interface | 9 / 9 failed: no port writes | 9 / 9 pass | none needed |
 | 3 | G3 Action modules | 9 / 10 failed: no interface calls | 10 / 10 pass | none needed |
@@ -64,27 +62,7 @@ The test files for all groups were written first, from `TEST_PLAN.md`, against s
 | 5 | G5 Controller FSM | 38 / 38 failed: no signals | 38 / 38 pass | Pointer parameters of the private helpers replaced by value parameters (C rule "check pointers"); `count_tick()` returns the new value. Re-run: 38 / 38 pass |
 | 6 | G6 RVC System, Main, CH-01 | 10 / 11 System failed (no writes); CH-01 failed (calls missing) | 11 / 11 + CH-01 pass. Full suite 84 / 84 | none needed |
 
-## 4. Coverage (C production code, `src/` except `main.c`)
-
-Reports: `logs/coverage_line.txt`, `logs/coverage_branch.txt`, HTML `coverage/index.html`.
-
-| Metric | Result |
-|---|---|
-| Lines | **100.0 %** (197 / 197) |
-| Functions | **100.0 %** (40 / 40) |
-| Branches | **94.9 %** (37 / 39) |
-
-Per-file branch coverage: 100% everywhere except `controller.c` (25 / 27, 92%).
-
-**Uncovered code.** There are two branches, both in `controller.c`. Each is the compiler's implicit "no case matched" exit of a `switch` on an enum:
-- line 55: `switch (choice)` on `AvoidChoice`
-- line 156: `switch (s_state)` on `ControllerState`
-
-Every enumerator has a case, and both variables only ever hold enum values. `choice` comes from `decide_avoidance()`, and `s_state` is set only by the Controller. So these branches cannot be reached through any valid input. No test was added for them, because a test would have to put an invalid value into hidden state, and the design has no way to do that. No behaviour is untested.
-
-`main.c` is excluded from coverage. It is compiled but not executed, because its Tick loop has no end (SC Section 9 item 5). Its 3 calls are checked statically by CH-01, and the same entry points are exercised by `test_system`.
-
-## 5. Requirement Verification Evidence
+## 4. Requirement Verification Evidence
 
 | Req. | Verified by (all passing) |
 |---|---|
@@ -115,13 +93,13 @@ Every enumerator has a case, and both variables only ever hold enum values. `cho
 | C28 | T11, CL_C28 |
 | C29 | T16, T21, CL_C29 |
 
-## 6. Differences from the Structure Chart
+## 5. Differences from the Structure Chart
 
-None. See `module_traceability.md` Section 4. CH-01 verifies the caller–callee relationships automatically.
+None. See `artifacts/TDD/module_traceability.md` Section 4. CH-01 verifies the caller–callee relationships automatically.
 
-## 7. Status
+## 6. Status
 
 - Unit tests: **all passing (84/84)**.
-- Coverage: reported above.
+- Coverage: see `coverage_report.md`.
 - Controller behaviour: matches the FSM. Each of T1–T25 is tested.
 - Next phase (system testing with the web simulator) waits for human approval of this implementation.

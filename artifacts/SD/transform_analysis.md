@@ -1,6 +1,6 @@
 # Transform Analysis
 
-Sources: `preliminary_requirements.md` (R1–R7), `clarifications.md` (C1–C29), `artifacts/SA/event_list.md` (Rev 3), `artifacts/SA/context_diagram.md` (Rev 3), `artifacts/SA/DFD/dfd_level_0.md` – `dfd_level_3.md`, `artifacts/SA/DFD/dfd_level_4_fsm.md`, `artifacts/SA/data_dictionary.md` (Rev 8), `artifacts/SA/process_specification.md` (Rev 8), `artifacts/SA/sa_consistency_report.md`.
+Sources: `docs/preliminary_requirements.md` (R1–R7), `docs/clarifications.md` (C1–C29), `artifacts/SA/event_list.md` (Rev 3), `artifacts/SA/context_diagram.md` (Rev 3), `artifacts/SA/DFD/dfd_level_0.md` – `dfd_level_3.md`, `artifacts/SA/DFD/dfd_level_4_fsm.md`, `artifacts/SA/data_dictionary.md` (Rev 8), `artifacts/SA/process_specification.md` (Rev 8), `artifacts/SA/sa_consistency_report.md`.
 
 ## 1. Objective
 Identify the Afferent Flow, Central Transformation and Efferent Flow in the approved DFD hierarchy. The analysis is based on the leaf processes: Level 2 primitives 1.1–1.6, 2.2 and 2.3, and Level 3 processes 2.1.1–2.1.8. The boundaries found here are the basis for the first-level factoring of the Structure Chart (`structure_chart.md`).

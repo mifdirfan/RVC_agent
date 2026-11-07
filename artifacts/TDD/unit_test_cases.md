@@ -1,6 +1,6 @@
-# Unit Test Plan
+# Unit Test Cases
 
-Sources: `preliminary_requirements.md` (R1–R7), `clarifications.md` (C1–C29), `artifacts/SA/event_list.md`, `artifacts/SA/DFD/dfd_level_4_fsm.md` (T1–T25), `artifacts/SA/process_specification.md` (PS), `artifacts/SA/data_dictionary.md` (DD), `artifacts/SD/structure_chart.md` (SC).
+Sources: `docs/preliminary_requirements.md` (R1–R7), `docs/clarifications.md` (C1–C29), `artifacts/SA/event_list.md`, `artifacts/SA/DFD/dfd_level_4_fsm.md` (T1–T25), `artifacts/SA/process_specification.md` (PS), `artifacts/SA/data_dictionary.md` (DD), `artifacts/SD/structure_chart.md` (SC).
 
 ## 1. Test Executables and Test Doubles
 

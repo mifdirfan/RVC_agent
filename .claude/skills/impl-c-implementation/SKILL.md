@@ -6,7 +6,7 @@ description: Implement approved Structured Design artifacts in C11, preserving t
 # C Implementation
 
 ## Inputs
-- clarifications.md
+- docs/clarifications.md
 - artifacts/SD/structure_chart.md
 - artifacts/SD/transform_analysis.md
 - artifacts/SA/DFD/dfd_level_4_fsm.md
@@ -79,7 +79,9 @@ and caller-callee relationships.
 - tests/
 - CMakeLists.txt
 - artifacts/Implementation/module_traceability.md
-- artifacts/Implementation/test_report.md
+- artifacts/TDD/unit_test_cases.md
+- artifacts/TDD/test_execution_results.md
+- artifacts/TDD/coverage_report.md
 
 ## Completion Criteria
 - All required Structure Chart modules are implemented.

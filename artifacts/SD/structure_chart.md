@@ -1,6 +1,6 @@
 # Structure Chart
 
-Sources: `artifacts/SD/transform_analysis.md`, `preliminary_requirements.md` (R1–R7), `clarifications.md` (C1–C29), `artifacts/SA/DFD/dfd_level_0.md` – `dfd_level_3.md`, `artifacts/SA/DFD/dfd_level_4_fsm.md` (T1–T25), `artifacts/SA/data_dictionary.md` (Rev 8), `artifacts/SA/process_specification.md` (Rev 8).
+Sources: `artifacts/SD/transform_analysis.md`, `docs/preliminary_requirements.md` (R1–R7), `docs/clarifications.md` (C1–C29), `artifacts/SA/DFD/dfd_level_0.md` – `dfd_level_3.md`, `artifacts/SA/DFD/dfd_level_4_fsm.md` (T1–T25), `artifacts/SA/data_dictionary.md` (Rev 8), `artifacts/SA/process_specification.md` (Rev 8).
 
 ## 1. Objective
 This document defines the hierarchical C module structure for the RVC. It is derived from the Transform Analysis and the approved SA artifacts. Each module is a C translation unit (`.c` / `.h`) with the functions listed in Section 5. An arrow is a real C function call. No implementation code is given here.

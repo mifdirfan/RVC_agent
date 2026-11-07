@@ -1,6 +1,6 @@
 # System Context Diagram
 
-Sources: `preliminary_requirements.md` (R1–R7), `clarifications.md` (C1–C28), `artifacts/SA/event_list.md` (Rev 3).
+Sources: `docs/preliminary_requirements.md` (R1–R7), `docs/clarifications.md` (C1–C28), `artifacts/SA/event_list.md` (Rev 3).
 
 ## Revision History
 

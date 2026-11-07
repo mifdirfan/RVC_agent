@@ -1,7 +1,7 @@
 // Controller (2.1.1) = Level 4 FSM, T1 .. T25 (dfd_level_4_fsm.md, SC Section 7).
 // The Controller is linked with fake stores and fake action modules, so each test
 // asserts the exact Enable / Disable / Trigger sequence of a transition.
-// Test plan: INIT-07, T1 .. T25, CL-C10/C11/C13/C14/C28/C29, CNT-01 .. CNT-05.
+// Unit test cases (artifacts/TDD/unit_test_cases.md): INIT-07, T1 .. T25, CL-C10/C11/C13/C14/C28/C29, CNT-01 .. CNT-05.
 #include <gtest/gtest.h>
 #include <vector>
 

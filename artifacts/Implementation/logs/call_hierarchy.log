@@ -1,0 +1,21 @@
+ok   avoidance.c: (no calls)
+ok   clean_normal.c: ['cleaner_interface_send']
+ok   clean_off.c: ['cleaner_interface_send']
+ok   cleaner_interface.c: ['rvc_port_write_clean']
+ok   controller.c: ['clean_normal_trigger', 'clean_off_trigger', 'decide_avoidance', 'dust_existence_get', 'move_backward_disable', 'move_backward_enable', 'move_forward_disable', 'move_forward_enable', 'obstacle_location_get', 'power_up_clean_trigger', 'turn_left_trigger', 'turn_right_trigger']
+ok   detection.c: ['dust_existence_set', 'dust_sensor_sample', 'left_sensor_sample', 'obstacle_location_set_sides', 'right_sensor_sample']
+ok   dust_existence.c: (no calls)
+ok   dust_sensor.c: ['rvc_port_read_dust_sensor']
+ok   front_sensor.c: ['obstacle_location_set_front']
+ok   left_sensor.c: ['rvc_port_read_left_sensor']
+ok   main.c: ['rvc_port_wait_tick', 'rvc_startup', 'rvc_tick']
+ok   motor_interface.c: ['rvc_port_write_direction']
+ok   move_backward.c: ['motor_interface_send']
+ok   move_forward.c: ['motor_interface_send']
+ok   obstacle_location.c: (no calls)
+ok   power_up_clean.c: ['cleaner_interface_send']
+ok   right_sensor.c: ['rvc_port_read_right_sensor']
+ok   rvc.c: ['cleaner_interface_init', 'controller_init', 'controller_tick', 'detect_on_tick', 'dust_existence_init', 'motor_interface_init', 'move_backward_init', 'move_forward_init', 'obstacle_location_init']
+ok   turn_left.c: ['motor_interface_send']
+ok   turn_right.c: ['motor_interface_send']
+CH-01 PASS

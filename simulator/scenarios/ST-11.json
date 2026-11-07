@@ -1,0 +1,88 @@
+{
+  "id": "ST-11",
+  "name": "Obstacle cancels the power-up",
+  "start": {
+    "x": 4,
+    "y": 4,
+    "dir": "N"
+  },
+  "obstacles": [
+    [
+      4,
+      2
+    ]
+  ],
+  "dust": [
+    [
+      4,
+      4
+    ],
+    [
+      3,
+      3
+    ]
+  ],
+  "max_ticks": 20,
+  "functions": [
+    "EF-12",
+    "EF-14",
+    "EF-06",
+    "EF-09",
+    "EF-18"
+  ],
+  "requirements": [
+    "R3",
+    "R5",
+    "C4",
+    "C6",
+    "C8",
+    "C11",
+    "C25",
+    "C28"
+  ],
+  "fsm": [
+    "T6",
+    "T7",
+    "T12",
+    "T16",
+    "T10"
+  ],
+  "events": [
+    "Dust Sensor Input",
+    "Front Sensor Input",
+    "Clean",
+    "Direction"
+  ],
+  "ps": [
+    "1.1",
+    "1.4",
+    "2.1.1",
+    "2.1.3",
+    "2.1.6",
+    "2.1.7",
+    "2.1.8",
+    "2.2",
+    "2.3"
+  ],
+  "expected": [
+    "Tick 1: dust on the start cell: Clean = clean_up.",
+    "Tick 2: at (4,3) obstacle (4,2) ahead: Disable Move Forward, Clean = clean_off, Turn Left. The power-up is cancelled after 1 tick (C11).",
+    "Tick 5: turn done: Forward + clean_on (the cancelled power-up is not resumed).",
+    "Tick 6: dust at (3,3): a new power-up, Clean = clean_up.",
+    "Tick 9: wall ahead at (0,3): the front is checked first, so Turn Left + clean_off (front before the power-up end)."
+  ],
+  "key_ticks": [
+    1,
+    2,
+    5,
+    6,
+    9
+  ],
+  "function_text": [
+    "EF-12 – Dust: power-up (clean_up) for 3 ticks, then back to clean_on",
+    "EF-14 – An obstacle during power-up cancels the power-up",
+    "EF-06 – Avoidance: turn left, left has priority when both sides are free",
+    "EF-09 – Cleaning stopped (clean_off) only while turning or reversing",
+    "EF-18 – Front obstacle has priority over dust"
+  ]
+}

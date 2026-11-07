@@ -1,0 +1,84 @@
+{
+  "id": "ST-18",
+  "name": "Successive left turns around a set of obstacles",
+  "start": {
+    "x": 4,
+    "y": 4,
+    "dir": "N"
+  },
+  "obstacles": [
+    [
+      4,
+      1
+    ],
+    [
+      2,
+      2
+    ],
+    [
+      3,
+      6
+    ]
+  ],
+  "dust": [],
+  "max_ticks": 30,
+  "functions": [
+    "EF-03",
+    "EF-06",
+    "EF-08",
+    "EF-09",
+    "EF-17"
+  ],
+  "requirements": [
+    "R3",
+    "C1",
+    "C4",
+    "C5",
+    "C8",
+    "C12"
+  ],
+  "fsm": [
+    "T2",
+    "T12",
+    "T16",
+    "T5"
+  ],
+  "events": [
+    "Front Sensor Input",
+    "Direction",
+    "Clean"
+  ],
+  "ps": [
+    "1.1",
+    "2.1.1",
+    "2.1.2",
+    "2.1.3",
+    "2.1.6",
+    "2.1.7",
+    "2.2",
+    "2.3"
+  ],
+  "expected": [
+    "Tick 3: (4,1) ahead at (4,2): Turn Left. Tick 6: Forward heading W.",
+    "Tick 7: (2,2) ahead at (3,2): Turn Left again. Tick 10: Forward heading S.",
+    "Tick 13: (3,6) ahead at (3,5): Turn Left. Tick 16: Forward heading E.",
+    "Tick 22: wall ahead at (9,5): Turn Left.",
+    "Every turn lasts 3 ticks with clean_off and is followed by Forward + clean_on."
+  ],
+  "key_ticks": [
+    3,
+    6,
+    7,
+    10,
+    13,
+    16,
+    22
+  ],
+  "function_text": [
+    "EF-03 – Front obstacle detection by interrupt (walls and obstacles); false only updates the store",
+    "EF-06 – Avoidance: turn left, left has priority when both sides are free",
+    "EF-08 – 3-tick turn, then resume forward with clean_on",
+    "EF-09 – Cleaning stopped (clean_off) only while turning or reversing",
+    "EF-17 – Direction and Clean are sent only when their value changes; signals only on transitions"
+  ]
+}

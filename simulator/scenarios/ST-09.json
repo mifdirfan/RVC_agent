@@ -1,0 +1,71 @@
+{
+  "id": "ST-09",
+  "name": "Single dust spot: 3-tick power-up, then normal cleaning",
+  "start": {
+    "x": 4,
+    "y": 4,
+    "dir": "S"
+  },
+  "obstacles": [],
+  "dust": [
+    [
+      4,
+      5
+    ]
+  ],
+  "max_ticks": 20,
+  "functions": [
+    "EF-04",
+    "EF-12",
+    "EF-02",
+    "EF-17"
+  ],
+  "requirements": [
+    "R1",
+    "R5",
+    "C2",
+    "C6",
+    "C7",
+    "C12",
+    "C28"
+  ],
+  "fsm": [
+    "T6",
+    "T10",
+    "T11",
+    "T2"
+  ],
+  "events": [
+    "Dust Sensor Input",
+    "Tick",
+    "Clean"
+  ],
+  "ps": [
+    "1.4",
+    "1.6",
+    "2.1.1",
+    "2.1.8",
+    "2.1.6",
+    "2.3"
+  ],
+  "expected": [
+    "Tick 2: at (4,5) dust = true and front clear: Clean = clean_up; no Direction write (motion continues forward) (R5).",
+    "Ticks 2-4: power-up lasts 3 ticks (power-up counter 0, 1, 2) (C6).",
+    "Tick 5: power-up over: Clean = clean_on (C28).",
+    "Tick 6: wall ahead at (4,9): Turn Left + clean_off.",
+    "The dust at (4,5) is gone after tick 2."
+  ],
+  "key_ticks": [
+    1,
+    2,
+    4,
+    5,
+    6
+  ],
+  "function_text": [
+    "EF-04 – Periodic left/right/dust sampling, once per tick",
+    "EF-12 – Dust: power-up (clean_up) for 3 ticks, then back to clean_on",
+    "EF-02 – Straight forward movement with normal cleaning (clean_on)",
+    "EF-17 – Direction and Clean are sent only when their value changes; signals only on transitions"
+  ]
+}

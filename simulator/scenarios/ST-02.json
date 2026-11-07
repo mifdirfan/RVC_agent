@@ -1,0 +1,118 @@
+{
+  "id": "ST-02",
+  "name": "Straight cleaning through a corridor with side walls",
+  "start": {
+    "x": 4,
+    "y": 4,
+    "dir": "N"
+  },
+  "obstacles": [
+    [
+      3,
+      1
+    ],
+    [
+      3,
+      2
+    ],
+    [
+      3,
+      3
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      3,
+      5
+    ],
+    [
+      3,
+      6
+    ],
+    [
+      5,
+      1
+    ],
+    [
+      5,
+      2
+    ],
+    [
+      5,
+      3
+    ],
+    [
+      5,
+      4
+    ],
+    [
+      5,
+      5
+    ],
+    [
+      5,
+      6
+    ]
+  ],
+  "dust": [],
+  "max_ticks": 20,
+  "functions": [
+    "EF-02",
+    "EF-04",
+    "EF-05",
+    "EF-06",
+    "EF-17"
+  ],
+  "requirements": [
+    "R2",
+    "R3",
+    "C2",
+    "C4",
+    "C12",
+    "C13",
+    "C17"
+  ],
+  "fsm": [
+    "T5",
+    "T2",
+    "T12",
+    "T16"
+  ],
+  "events": [
+    "Left/Right Sensor Input",
+    "Front Sensor Input",
+    "Direction",
+    "Clean"
+  ],
+  "ps": [
+    "1.2",
+    "1.3",
+    "1.5",
+    "2.1.1",
+    "2.1.2",
+    "2.1.3",
+    "2.2"
+  ],
+  "expected": [
+    "Ticks 1-4: left and right are both sampled true each tick while the front is clear. The RVC keeps moving forward with clean_on; the state stays FwdNormal and nothing is written (C13, C12).",
+    "The RVC leaves the corridor at (4,0) after tick 4.",
+    "Tick 5: wall ahead at (4,0), left (3,0) free: Turn Left + clean_off (R3, C4).",
+    "Tick 8: Forward + clean_on heading W. From tick 9 the left side (S) is the corridor wall again; it causes no reaction (C13)."
+  ],
+  "key_ticks": [
+    1,
+    4,
+    5,
+    8,
+    9
+  ],
+  "function_text": [
+    "EF-02 – Straight forward movement with normal cleaning (clean_on)",
+    "EF-04 – Periodic left/right/dust sampling, once per tick",
+    "EF-05 – Side-only obstacle with front clear causes no reaction",
+    "EF-06 – Avoidance: turn left, left has priority when both sides are free",
+    "EF-17 – Direction and Clean are sent only when their value changes; signals only on transitions"
+  ]
+}

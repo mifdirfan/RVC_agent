@@ -1,0 +1,84 @@
+{
+  "id": "ST-16",
+  "name": "Fully enclosed start cell with dust",
+  "start": {
+    "x": 4,
+    "y": 4,
+    "dir": "N"
+  },
+  "obstacles": [
+    [
+      4,
+      3
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      5,
+      4
+    ],
+    [
+      4,
+      5
+    ]
+  ],
+  "dust": [
+    [
+      4,
+      4
+    ]
+  ],
+  "max_ticks": 15,
+  "functions": [
+    "EF-18",
+    "EF-10",
+    "EF-15",
+    "EF-09"
+  ],
+  "requirements": [
+    "R4",
+    "R5",
+    "C9",
+    "C10",
+    "C8"
+  ],
+  "fsm": [
+    "T4",
+    "T24",
+    "T25"
+  ],
+  "events": [
+    "Front/Left/Right Sensor Input",
+    "Dust Sensor Input",
+    "Direction",
+    "Clean"
+  ],
+  "ps": [
+    "1.1",
+    "1.6",
+    "2.1.1",
+    "2.1.5",
+    "2.1.7",
+    "2.2",
+    "2.3"
+  ],
+  "expected": [
+    "Tick 1: F (interrupt), L, R and dust are all true: front first -> Backward + clean_off; no clean_up.",
+    "From tick 4 the 3-tick minimum is reached, but L and R stay blocked, so the RVC keeps reversing for the whole run (C9). Dust stays ignored (C10) and is never cleaned.",
+    "The cell behind is blocked: the simulator flags a collision on every tick and the pose does not change. The requirements define no rear sensor; record what you observe."
+  ],
+  "key_ticks": [
+    1,
+    3,
+    4,
+    15
+  ],
+  "function_text": [
+    "EF-18 – Front obstacle has priority over dust",
+    "EF-10 – Boxed in (F, L, R): move backward for at least 3 ticks, continue while both sides are blocked",
+    "EF-15 – Dust ignored while turning/reversing and on the tick a turn/reverse ends",
+    "EF-09 – Cleaning stopped (clean_off) only while turning or reversing"
+  ]
+}

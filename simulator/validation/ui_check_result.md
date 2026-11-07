@@ -1,0 +1,20 @@
+Run: 2026-11-07T17:31:29.483Z · `node --experimental-websocket simulator/validation/ui_check.mjs` against http://127.0.0.1:8765 (headless Chrome).
+
+| Check | What is verified | Result | Detail |
+|---|---|---|---|
+| U1 | Page loads: scenario list, 10x10 grid, ST-01 trace | OK | 22 scenarios, 100 cells |
+| U2 | Step advances one tick at a time (tick counter, history row follow) | OK | [3,"3","3"] |
+| U3 | Step back inspects the previous snapshot; Reset returns to tick 0 | OK | back->2, reset->0 |
+| U4 | Displayed controller state, motor output and RVC cell equal the C trace (8 ticks of ST-01) | OK |  |
+| U5 | Start plays automatically and stops at the tick limit | OK | Stopped at the tick limit (20). |
+| U6 | History row click and tick slider navigate the saved history | OK | row->5, slider->7 |
+| U7 | Map editing: obstacle/dust toggling, refusals on start cell and overlaps, start cell and heading change | OK | {"refusedStart":true,"added":true,"refusedDust":true} |
+| U8 | Max ticks above 100 rejected; 30 accepted | OK |  |
+| U9 | Custom map executes the C controller from reset with the custom start | OK | {"pose":{"x":1,"y":1,"dir":"E"},"n":31,"obs":"[[3,1],[5,1],[2,2],[3,2],[5,2],[3,3],[5,3],[3,4],[5,4],[3,5],[5,5],[3,6],[5,6]]","dust":"[[6,6]]"} |
+| U10 | Evaluation of an unsaved edited map is refused; "Save as scenario" stores it and lists it as custom | OK |  |
+| U11 | Human evaluation is recorded with its trace and test_results.md is regenerated | OK | simulator/results/traces/ZZ-UITEST_20261108-023128.json |
+| U12 | Restart re-runs the C controller from reset and plays; Pause stops | OK |  |
+| U13 | Deep link #scenario=ST-05&tick=6 opens the scenario at the tick | OK |  |
+| U14 | No uncaught page errors | OK |  |
+
+Temporary test data (custom scenario, evaluation, trace) was removed after the run.

@@ -1,0 +1,2 @@
+C:\MinGW\bin\ar.exe qc libtest_actions_modules.a CMakeFiles/test_actions_modules.dir/src/move_forward.c.obj CMakeFiles/test_actions_modules.dir/src/move_backward.c.obj CMakeFiles/test_actions_modules.dir/src/turn_left.c.obj CMakeFiles/test_actions_modules.dir/src/turn_right.c.obj CMakeFiles/test_actions_modules.dir/src/clean_normal.c.obj CMakeFiles/test_actions_modules.dir/src/clean_off.c.obj CMakeFiles/test_actions_modules.dir/src/power_up_clean.c.obj
+C:\MinGW\bin\ranlib.exe libtest_actions_modules.a

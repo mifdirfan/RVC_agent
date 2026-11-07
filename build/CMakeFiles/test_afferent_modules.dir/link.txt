@@ -1,0 +1,2 @@
+C:\MinGW\bin\ar.exe qc libtest_afferent_modules.a CMakeFiles/test_afferent_modules.dir/src/left_sensor.c.obj CMakeFiles/test_afferent_modules.dir/src/right_sensor.c.obj CMakeFiles/test_afferent_modules.dir/src/dust_sensor.c.obj CMakeFiles/test_afferent_modules.dir/src/front_sensor.c.obj CMakeFiles/test_afferent_modules.dir/src/obstacle_location.c.obj CMakeFiles/test_afferent_modules.dir/src/dust_existence.c.obj CMakeFiles/test_afferent_modules.dir/src/detection.c.obj
+C:\MinGW\bin\ranlib.exe libtest_afferent_modules.a

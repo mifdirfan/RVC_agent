@@ -1,0 +1,78 @@
+{
+  "id": "ST-14",
+  "name": "Power-up cancelled by a right turn",
+  "start": {
+    "x": 4,
+    "y": 4,
+    "dir": "N"
+  },
+  "obstacles": [
+    [
+      4,
+      2
+    ],
+    [
+      3,
+      3
+    ]
+  ],
+  "dust": [
+    [
+      4,
+      4
+    ]
+  ],
+  "max_ticks": 15,
+  "functions": [
+    "EF-12",
+    "EF-14",
+    "EF-07",
+    "EF-09"
+  ],
+  "requirements": [
+    "R3",
+    "R5",
+    "C6",
+    "C8",
+    "C11"
+  ],
+  "fsm": [
+    "T6",
+    "T8",
+    "T17",
+    "T21"
+  ],
+  "events": [
+    "Dust Sensor Input",
+    "Front/Left Sensor Input",
+    "Direction",
+    "Clean"
+  ],
+  "ps": [
+    "1.1",
+    "1.4",
+    "2.1.1",
+    "2.1.4",
+    "2.1.7",
+    "2.1.8",
+    "2.2",
+    "2.3"
+  ],
+  "expected": [
+    "Tick 1: dust on the start cell: Clean = clean_up.",
+    "Tick 2: at (4,3) F = true, L = true (3,3), R = false: Disable Move Forward, clean_off, Turn Right (C11).",
+    "Tick 5: Forward + clean_on heading E."
+  ],
+  "key_ticks": [
+    1,
+    2,
+    4,
+    5
+  ],
+  "function_text": [
+    "EF-12 – Dust: power-up (clean_up) for 3 ticks, then back to clean_on",
+    "EF-14 – An obstacle during power-up cancels the power-up",
+    "EF-07 – Avoidance: turn right when the left is blocked",
+    "EF-09 – Cleaning stopped (clean_off) only while turning or reversing"
+  ]
+}

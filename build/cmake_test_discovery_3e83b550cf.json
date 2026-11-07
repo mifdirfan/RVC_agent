@@ -1,0 +1,67 @@
+{
+  "tests": 11,
+  "name": "AllTests",
+  "testsuites": [
+    {
+      "name": "System",
+      "tests": 11,
+      "testsuite": [
+        {
+          "name": "SYS01_StartupSendsForwardAndCleanOnOnceThenNothing",
+          "file": "C:\\Users\\mifdz\\Downloads\\261106_RVC_SASD_Claude\\tests\\test_system.cpp",
+          "line": 74
+        },
+        {
+          "name": "INIT08_StartupResetsStoresAndInterfaces",
+          "file": "C:\\Users\\mifdz\\Downloads\\261106_RVC_SASD_Claude\\tests\\test_system.cpp",
+          "line": 81
+        },
+        {
+          "name": "SYS02_FrontObstacleTurnLeftThreeTicksThenForward",
+          "file": "C:\\Users\\mifdz\\Downloads\\261106_RVC_SASD_Claude\\tests\\test_system.cpp",
+          "line": 96
+        },
+        {
+          "name": "SYS03_InterruptActedOnAtNextTickOnly",
+          "file": "C:\\Users\\mifdz\\Downloads\\261106_RVC_SASD_Claude\\tests\\test_system.cpp",
+          "line": 106
+        },
+        {
+          "name": "SYS04_SidesSampledOnSameTickBeforeDecision",
+          "file": "C:\\Users\\mifdz\\Downloads\\261106_RVC_SASD_Claude\\tests\\test_system.cpp",
+          "line": 115
+        },
+        {
+          "name": "SYS05_AllBlockedReverseUntilSideOpensThenTurnThenForward",
+          "file": "C:\\Users\\mifdz\\Downloads\\261106_RVC_SASD_Claude\\tests\\test_system.cpp",
+          "line": 125
+        },
+        {
+          "name": "SYS06_TurnReentryDoesNotResendTurnLeft",
+          "file": "C:\\Users\\mifdz\\Downloads\\261106_RVC_SASD_Claude\\tests\\test_system.cpp",
+          "line": 137
+        },
+        {
+          "name": "SYS07_DustPowersUpForThreeTicks",
+          "file": "C:\\Users\\mifdz\\Downloads\\261106_RVC_SASD_Claude\\tests\\test_system.cpp",
+          "line": 148
+        },
+        {
+          "name": "SYS08_ObstacleDuringPowerUpCancelsIt",
+          "file": "C:\\Users\\mifdz\\Downloads\\261106_RVC_SASD_Claude\\tests\\test_system.cpp",
+          "line": 156
+        },
+        {
+          "name": "SYS09_FrontFalseInterruptCausesNoAction",
+          "file": "C:\\Users\\mifdz\\Downloads\\261106_RVC_SASD_Claude\\tests\\test_system.cpp",
+          "line": 164
+        },
+        {
+          "name": "SYS10_TurnRightThenTurnLeftWhenLeftOpens",
+          "file": "C:\\Users\\mifdz\\Downloads\\261106_RVC_SASD_Claude\\tests\\test_system.cpp",
+          "line": 171
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "id": "ST-01",
+  "name": "Start-up and wall-following cleaning in an empty room",
+  "start": {
+    "x": 4,
+    "y": 4,
+    "dir": "N"
+  },
+  "obstacles": [],
+  "dust": [],
+  "max_ticks": 100,
+  "functions": [
+    "EF-01",
+    "EF-02",
+    "EF-03",
+    "EF-06",
+    "EF-08",
+    "EF-09",
+    "EF-17"
+  ],
+  "requirements": [
+    "R1",
+    "R2",
+    "R3",
+    "C1",
+    "C3",
+    "C4",
+    "C5",
+    "C8",
+    "C12",
+    "C13",
+    "C16",
+    "C21",
+    "C22",
+    "C27"
+  ],
+  "fsm": [
+    "T1",
+    "T2",
+    "T5",
+    "T12",
+    "T16"
+  ],
+  "events": [
+    "Front Sensor Input",
+    "Left/Right Sensor Input",
+    "Tick",
+    "Direction",
+    "Clean"
+  ],
+  "ps": [
+    "1.1",
+    "1.5",
+    "2.1.1",
+    "2.1.2",
+    "2.1.3",
+    "2.1.6",
+    "2.1.7",
+    "2.2",
+    "2.3"
+  ],
+  "expected": [
+    "Tick 0: Direction = Forward and Clean = clean_on are written once; state FwdNormal; all stores false (C21, C22, C27).",
+    "Ticks 1-4: the RVC moves straight N from (4,4) to (4,0). No Direction or Clean is written (C12).",
+    "Tick 5: at (4,0) the wall ahead raises the front interrupt (F = true). Left is free, so the RVC turns left: Direction = Turn Left, Clean = clean_off (R3, C4, C8).",
+    "Ticks 5-7: the turn lasts 3 ticks; the heading becomes W at the end of tick 7 (C5).",
+    "Tick 8: the front interrupt reports F = false; Direction = Forward and Clean = clean_on (R3).",
+    "For the rest of the run the RVC follows the walls, turning left at every corner (3-tick turn each). It never turns right and never reverses. The right sensor is true along the walls and causes no reaction (C13)."
+  ],
+  "key_ticks": [
+    0,
+    4,
+    5,
+    7,
+    8,
+    12,
+    15
+  ],
+  "function_text": [
+    "EF-01 – Start-up outputs: Direction = Forward and Clean = clean_on sent once; stores false",
+    "EF-02 – Straight forward movement with normal cleaning (clean_on)",
+    "EF-03 – Front obstacle detection by interrupt (walls and obstacles); false only updates the store",
+    "EF-06 – Avoidance: turn left, left has priority when both sides are free",
+    "EF-08 – 3-tick turn, then resume forward with clean_on",
+    "EF-09 – Cleaning stopped (clean_off) only while turning or reversing",
+    "EF-17 – Direction and Clean are sent only when their value changes; signals only on transitions"
+  ]
+}

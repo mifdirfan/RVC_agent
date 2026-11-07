@@ -1,0 +1,91 @@
+{
+  "id": "ST-13",
+  "name": "Dust ignored while reversing and on the reverse/turn end ticks",
+  "start": {
+    "x": 4,
+    "y": 4,
+    "dir": "N"
+  },
+  "obstacles": [
+    [
+      4,
+      1
+    ],
+    [
+      3,
+      2
+    ],
+    [
+      5,
+      2
+    ]
+  ],
+  "dust": [
+    [
+      4,
+      2
+    ],
+    [
+      4,
+      5
+    ]
+  ],
+  "max_ticks": 20,
+  "functions": [
+    "EF-10",
+    "EF-11",
+    "EF-15",
+    "EF-18",
+    "EF-09"
+  ],
+  "requirements": [
+    "R4",
+    "R5",
+    "C8",
+    "C9",
+    "C10",
+    "C29"
+  ],
+  "fsm": [
+    "T4",
+    "T24",
+    "T22",
+    "T12",
+    "T16"
+  ],
+  "events": [
+    "Front/Left/Right Sensor Input",
+    "Dust Sensor Input",
+    "Direction",
+    "Clean"
+  ],
+  "ps": [
+    "1.4",
+    "1.6",
+    "2.1.1",
+    "2.1.5",
+    "2.1.3",
+    "2.1.7",
+    "2.3"
+  ],
+  "expected": [
+    "Tick 3: at (4,2) F, L, R and dust are all true: Backward + clean_off (front before dust). Dust (4,2) stays (cleaning is off).",
+    "Tick 6: at (4,5) dust = true, reverse ends with left free: Turn Left; no Clean write, dust ignored (C29).",
+    "Ticks 7-8: dust still detected while turning: ignored (C10).",
+    "Tick 9: turn ends: Forward + clean_on; dust ignored on this tick (C29). No clean_up occurs in this run window."
+  ],
+  "key_ticks": [
+    3,
+    6,
+    7,
+    8,
+    9
+  ],
+  "function_text": [
+    "EF-10 – Boxed in (F, L, R): move backward for at least 3 ticks, continue while both sides are blocked",
+    "EF-11 – Reverse ends with a turn, left first",
+    "EF-15 – Dust ignored while turning/reversing and on the tick a turn/reverse ends",
+    "EF-18 – Front obstacle has priority over dust",
+    "EF-09 – Cleaning stopped (clean_off) only while turning or reversing"
+  ]
+}

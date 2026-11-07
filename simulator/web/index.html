@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RVC System Test Simulator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <h1>RVC System Test Simulator</h1>
+    <span class="sub">Real C controller (src/) via sim_runner · 10x10 grid · max 100 ticks</span>
+  </div>
+  <div class="tickbox" aria-live="polite">
+    <span class="label">Tick</span>
+    <span id="tickNow" class="tick-now">–</span>
+    <span class="tick-of">/ <span id="tickMax">–</span></span>
+    <span id="traceSource" class="badge">no trace</span>
+  </div>
+</header>
+
+<main class="layout">
+  <!-- Scenario panel -->
+  <section class="panel scenario-panel" aria-labelledby="scenHead">
+    <h2 id="scenHead">Scenario</h2>
+    <label class="field">
+      <span>Test scenario</span>
+      <select id="scenarioSelect"></select>
+    </label>
+    <div id="scenarioInfo" class="scenario-info"></div>
+
+    <h2 class="mt">Human evaluation</h2>
+    <form id="evalForm" class="eval-form" autocomplete="off">
+      <fieldset class="verdicts">
+        <legend>Result</legend>
+        <label><input type="radio" name="result" value="PASS"> PASS</label>
+        <label><input type="radio" name="result" value="FAIL"> FAIL</label>
+        <label><input type="radio" name="result" value="INCONCLUSIVE"> INCONCLUSIVE</label>
+      </fieldset>
+      <label class="field"><span>Evaluator</span><input id="evalEvaluator" type="text" maxlength="100"></label>
+      <label class="field"><span>Related tick(s)</span>
+        <span class="inline">
+          <input id="evalTicks" type="text" maxlength="200" placeholder="e.g. 3, 6-8">
+          <button type="button" id="addTickBtn" class="btn small" title="Append the current tick">+ current</button>
+        </span>
+      </label>
+      <label class="field"><span>Observations</span><textarea id="evalObs" rows="4" maxlength="4000"></textarea></label>
+      <button type="submit" class="btn primary" id="saveEvalBtn">Save evaluation</button>
+      <p id="evalStatus" class="status"></p>
+      <div id="evalExisting" class="existing"></div>
+    </form>
+  </section>
+
+  <!-- Map + controls -->
+  <section class="panel map-panel" aria-labelledby="mapHead">
+    <div class="panel-head">
+      <h2 id="mapHead">Map</h2>
+      <button type="button" id="editToggle" class="btn" aria-pressed="false">Edit map</button>
+    </div>
+
+    <div id="editBar" class="editbar" hidden>
+      <div class="tools" role="radiogroup" aria-label="Edit tool">
+        <label><input type="radio" name="tool" value="obstacle" checked> Obstacle</label>
+        <label><input type="radio" name="tool" value="dust"> Dust</label>
+        <label><input type="radio" name="tool" value="start"> Start cell</label>
+        <label><input type="radio" name="tool" value="erase"> Erase</label>
+      </div>
+      <div class="tools">
+        <label>Heading
+          <select id="startDir"><option>N</option><option>E</option><option>S</option><option>W</option></select>
+        </label>
+        <label>Max ticks <input id="maxTicks" type="number" min="1" max="100" value="100"></label>
+      </div>
+      <div class="tools">
+        <button type="button" id="clearMapBtn" class="btn small">Clear map</button>
+        <button type="button" id="resetMapBtn" class="btn small">Reset to scenario</button>
+        <button type="button" id="centerBtn" class="btn small">Start at centre (4,4)</button>
+        <button type="button" id="validateBtn" class="btn small">Validate</button>
+      </div>
+      <div class="tools">
+        <input id="saveId" type="text" placeholder="new id, e.g. CU-01" maxlength="40" aria-label="New scenario id">
+        <input id="saveName" type="text" placeholder="name" maxlength="200" aria-label="New scenario name">
+        <button type="button" id="saveScenBtn" class="btn small">Save as scenario</button>
+      </div>
+      <div class="tools">
+        <button type="button" id="exportMapBtn" class="btn small">Export map JSON</button>
+        <label class="btn small filebtn">Import map JSON<input id="importMap" type="file" accept=".json,application/json"></label>
+      </div>
+      <p class="hint">Click or drag on cells to apply the tool. A cell cannot hold an obstacle and dust at once,
+        and an obstacle cannot be placed on the start cell: such edits are refused, not altered.</p>
+    </div>
+
+    <div class="grid-wrap">
+      <div id="grid" class="grid" role="grid" aria-label="10 by 10 map"></div>
+    </div>
+    <div class="legend">
+      <span><i class="lg rvc"></i>RVC</span>
+      <span><i class="lg obs"></i>Obstacle / wall</span>
+      <span><i class="lg dust"></i>Dust</span>
+      <span><i class="lg path"></i>Visited</span>
+      <span><i class="lg c-on"></i>clean_on</span>
+      <span><i class="lg c-up"></i>clean_up</span>
+      <span><i class="lg c-off"></i>clean_off</span>
+    </div>
+    <p id="mapMsg" class="status" role="status"></p>
+
+    <div class="controls">
+      <button type="button" id="runBtn" class="btn primary" title="Execute the C controller from reset on this map">Run C controller</button>
+      <button type="button" id="startBtn" class="btn">▶ Start</button>
+      <button type="button" id="pauseBtn" class="btn">❚❚ Pause</button>
+      <button type="button" id="backBtn" class="btn" title="Inspect the previous saved snapshot">◀ Step back</button>
+      <button type="button" id="stepBtn" class="btn">Step ▶</button>
+      <button type="button" id="resetBtn" class="btn" title="Back to tick 0 (initial map, pose, controller state)">Reset</button>
+      <button type="button" id="restartBtn" class="btn" title="Re-run the C controller from reset and play">Restart</button>
+    </div>
+    <div class="controls">
+      <label class="speed">Speed <input id="speed" type="range" min="1" max="20" value="4"> <span id="speedVal">4</span> ticks/s</label>
+      <button type="button" id="exportTraceBtn" class="btn small">Export trace</button>
+    </div>
+    <input id="scrub" class="scrub" type="range" min="0" max="0" value="0" aria-label="Tick navigation">
+  </section>
+
+  <!-- State inspector -->
+  <section class="panel inspector-panel" aria-labelledby="inspHead">
+    <div class="panel-head">
+      <h2 id="inspHead">State inspector</h2>
+      <span class="hint">changed since previous tick are marked</span>
+    </div>
+    <div id="inspector" class="inspector"></div>
+  </section>
+
+  <!-- History -->
+  <section class="panel history-panel" aria-labelledby="histHead">
+    <div class="panel-head">
+      <h2 id="histHead">Execution history</h2>
+      <label class="hint"><input type="checkbox" id="onlyChanges"> only ticks with a transition, write or collision</label>
+    </div>
+    <div class="table-wrap">
+      <table id="history" class="history">
+        <thead>
+          <tr>
+            <th>Tick</th><th>Sensed at</th><th>F</th><th>L</th><th>R</th><th>D</th><th>IRQ</th>
+            <th>State</th><th>FSM</th><th>turn</th><th>rev</th><th>pwr</th><th>MF</th><th>MB</th>
+            <th>Direction write</th><th>Clean write</th><th>Motor</th><th>Cleaner</th><th>Motion</th><th>Pose after</th><th>Cleaned</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

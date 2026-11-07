@@ -1,0 +1,259 @@
+Test project C:/Users/mifdz/Downloads/261106_RVC_SASD_Claude/build
+      Start  1: Afferent.INIT01_ObstacleLocationInitIsAllFalse
+ 1/84 Test  #1: Afferent.INIT01_ObstacleLocationInitIsAllFalse .....................***Failed    0.03 sec
+      Start  2: Afferent.INIT02_DustExistenceInitIsFalse
+ 2/84 Test  #2: Afferent.INIT02_DustExistenceInitIsFalse ...........................***Failed    0.03 sec
+      Start  3: Afferent.AFF01_LeftSensorReturnsPortValueOncePerCall
+ 3/84 Test  #3: Afferent.AFF01_LeftSensorReturnsPortValueOncePerCall ...............***Failed    0.03 sec
+      Start  4: Afferent.AFF02_RightSensorReturnsPortValueOncePerCall
+ 4/84 Test  #4: Afferent.AFF02_RightSensorReturnsPortValueOncePerCall ..............***Failed    0.03 sec
+      Start  5: Afferent.AFF03_DustSensorReturnsPortValueOncePerCall
+ 5/84 Test  #5: Afferent.AFF03_DustSensorReturnsPortValueOncePerCall ...............***Failed    0.03 sec
+      Start  6: Afferent.AFF04_FrontInterruptTrueSetsOnlyFront
+ 6/84 Test  #6: Afferent.AFF04_FrontInterruptTrueSetsOnlyFront .....................***Failed    0.03 sec
+      Start  7: Afferent.AFF05_FrontInterruptFalseIsPassedOn
+ 7/84 Test  #7: Afferent.AFF05_FrontInterruptFalseIsPassedOn .......................***Failed    0.03 sec
+      Start  8: Afferent.AFF06_SetSidesKeepsFront
+ 8/84 Test  #8: Afferent.AFF06_SetSidesKeepsFront ..................................***Failed    0.04 sec
+      Start  9: Afferent.AFF07_SetFrontKeepsSides
+ 9/84 Test  #9: Afferent.AFF07_SetFrontKeepsSides ..................................***Failed    0.03 sec
+      Start 10: Afferent.AFF08_DustExistenceStoresValue
+10/84 Test #10: Afferent.AFF08_DustExistenceStoresValue ............................***Failed    0.03 sec
+      Start 11: Afferent.AFF09_DetectOnTickSamplesEachOnceAndStores
+11/84 Test #11: Afferent.AFF09_DetectOnTickSamplesEachOnceAndStores ................***Failed    0.03 sec
+      Start 12: Interfaces.C12_01_MotorFirstSendIsWritten
+12/84 Test #12: Interfaces.C12_01_MotorFirstSendIsWritten ..........................***Failed    0.03 sec
+      Start 13: Interfaces.C12_02_MotorSameValueNotResent
+13/84 Test #13: Interfaces.C12_02_MotorSameValueNotResent ..........................***Failed    0.03 sec
+      Start 14: Interfaces.C12_03_MotorOnlyChangesWritten
+14/84 Test #14: Interfaces.C12_03_MotorOnlyChangesWritten ..........................***Failed    0.04 sec
+      Start 15: Interfaces.C12_04_MotorAllFourValues
+15/84 Test #15: Interfaces.C12_04_MotorAllFourValues ...............................***Failed    0.03 sec
+      Start 16: Interfaces.INIT03_MotorInitForgetsLastSent
+16/84 Test #16: Interfaces.INIT03_MotorInitForgetsLastSent .........................***Failed    0.03 sec
+      Start 17: Interfaces.C12_05_CleanerFirstSendIsWritten
+17/84 Test #17: Interfaces.C12_05_CleanerFirstSendIsWritten ........................***Failed    0.04 sec
+      Start 18: Interfaces.C12_06_CleanerSameValueNotResent
+18/84 Test #18: Interfaces.C12_06_CleanerSameValueNotResent ........................***Failed    0.04 sec
+      Start 19: Interfaces.C12_07_CleanerOnlyChangesWritten
+19/84 Test #19: Interfaces.C12_07_CleanerOnlyChangesWritten ........................***Failed    0.04 sec
+      Start 20: Interfaces.INIT04_CleanerInitForgetsLastSent
+20/84 Test #20: Interfaces.INIT04_CleanerInitForgetsLastSent .......................***Failed    0.04 sec
+      Start 21: Actions.INIT05_06_InitSendsNothing
+21/84 Test #21: Actions.INIT05_06_InitSendsNothing .................................   Passed    0.05 sec
+      Start 22: Actions.ACT01_MoveForwardEnableSendsForwardOnce
+22/84 Test #22: Actions.ACT01_MoveForwardEnableSendsForwardOnce ....................***Failed    0.05 sec
+      Start 23: Actions.ACT02_MoveForwardDisableSendsNothing
+23/84 Test #23: Actions.ACT02_MoveForwardDisableSendsNothing .......................***Failed    0.05 sec
+      Start 24: Actions.ACT03_MoveBackwardEnableSendsBackwardOnce
+24/84 Test #24: Actions.ACT03_MoveBackwardEnableSendsBackwardOnce ..................***Failed    0.05 sec
+      Start 25: Actions.ACT04_MoveBackwardDisableSendsNothing
+25/84 Test #25: Actions.ACT04_MoveBackwardDisableSendsNothing ......................***Failed    0.06 sec
+      Start 26: Actions.ACT05_TurnLeftOnePerTrigger
+26/84 Test #26: Actions.ACT05_TurnLeftOnePerTrigger ................................***Failed    0.05 sec
+      Start 27: Actions.ACT06_TurnRightOnePerTrigger
+27/84 Test #27: Actions.ACT06_TurnRightOnePerTrigger ...............................***Failed    0.06 sec
+      Start 28: Actions.ACT07_CleanNormalSendsCleanOn
+28/84 Test #28: Actions.ACT07_CleanNormalSendsCleanOn ..............................***Failed    0.05 sec
+      Start 29: Actions.ACT08_CleanOffSendsCleanOff
+29/84 Test #29: Actions.ACT08_CleanOffSendsCleanOff ................................***Failed    0.06 sec
+      Start 30: Actions.ACT09_PowerUpCleanSendsCleanUp
+30/84 Test #30: Actions.ACT09_PowerUpCleanSendsCleanUp .............................***Failed    0.05 sec
+      Start 31: Avoidance.AV01_BothFreeTurnsLeft
+31/84 Test #31: Avoidance.AV01_BothFreeTurnsLeft ...................................***Failed    0.04 sec
+      Start 32: Avoidance.AV02_LeftFreeRightBlockedTurnsLeft
+32/84 Test #32: Avoidance.AV02_LeftFreeRightBlockedTurnsLeft .......................***Failed    0.05 sec
+      Start 33: Avoidance.AV03_LeftBlockedRightFreeTurnsRight
+33/84 Test #33: Avoidance.AV03_LeftBlockedRightFreeTurnsRight ......................***Failed    0.03 sec
+      Start 34: Avoidance.AV04_BothBlockedBackward
+34/84 Test #34: Avoidance.AV04_BothBlockedBackward .................................   Passed    0.04 sec
+      Start 35: Controller.T1_InitEnablesMoveForwardThenTriggersCleanNormal
+35/84 Test #35: Controller.T1_InitEnablesMoveForwardThenTriggersCleanNormal ........***Failed    0.04 sec
+      Start 36: Controller.INIT07_InitResetsStateToFwdNormal
+36/84 Test #36: Controller.INIT07_InitResetsStateToFwdNormal .......................***Failed    0.03 sec
+      Start 37: Controller.T2_FwdNormalFrontBlockedLeftFreeTurnsLeft
+37/84 Test #37: Controller.T2_FwdNormalFrontBlockedLeftFreeTurnsLeft ...............***Failed    0.03 sec
+      Start 38: Controller.T2_LeftFirstWhenBothSidesFree
+38/84 Test #38: Controller.T2_LeftFirstWhenBothSidesFree ...........................***Failed    0.03 sec
+      Start 39: Controller.T3_FwdNormalFrontAndLeftBlockedTurnsRight
+39/84 Test #39: Controller.T3_FwdNormalFrontAndLeftBlockedTurnsRight ...............***Failed    0.03 sec
+      Start 40: Controller.T4_FwdNormalAllBlockedMovesBackward
+40/84 Test #40: Controller.T4_FwdNormalAllBlockedMovesBackward .....................***Failed    0.03 sec
+      Start 41: Controller.T5_FwdNormalFrontClearNoDustNoSignalForAnySide
+41/84 Test #41: Controller.T5_FwdNormalFrontClearNoDustNoSignalForAnySide ..........***Failed    0.03 sec
+      Start 42: Controller.T6_FwdNormalDustStartsPowerUp
+42/84 Test #42: Controller.T6_FwdNormalDustStartsPowerUp ...........................***Failed    0.03 sec
+      Start 43: Controller.T7_PowerUpFrontBlockedLeftFreeCancelsAndTurnsLeft
+43/84 Test #43: Controller.T7_PowerUpFrontBlockedLeftFreeCancelsAndTurnsLeft .......***Failed    0.03 sec
+      Start 44: Controller.T8_PowerUpFrontAndLeftBlockedCancelsAndTurnsRight
+44/84 Test #44: Controller.T8_PowerUpFrontAndLeftBlockedCancelsAndTurnsRight .......***Failed    0.03 sec
+      Start 45: Controller.T9_PowerUpAllBlockedCancelsAndMovesBackward
+45/84 Test #45: Controller.T9_PowerUpAllBlockedCancelsAndMovesBackward .............***Failed    0.03 sec
+      Start 46: Controller.T10_PowerUpStaysForTwoTicksIgnoringDustAndSides
+46/84 Test #46: Controller.T10_PowerUpStaysForTwoTicksIgnoringDustAndSides .........***Failed    0.03 sec
+      Start 47: Controller.T11_PowerUpEndsOnThirdTick
+47/84 Test #47: Controller.T11_PowerUpEndsOnThirdTick ..............................***Failed    0.03 sec
+      Start 48: Controller.T12_TurnLeftIgnoresFrontAndDustForTwoTicks
+48/84 Test #48: Controller.T12_TurnLeftIgnoresFrontAndDustForTwoTicks ..............***Failed    0.03 sec
+      Start 49: Controller.T13_TurnLeftEndsFrontBlockedLeftFreeReentersTurnLeft
+49/84 Test #49: Controller.T13_TurnLeftEndsFrontBlockedLeftFreeReentersTurnLeft ....***Failed    0.03 sec
+      Start 50: Controller.T14_TurnLeftEndsFrontAndLeftBlockedTurnsRight
+50/84 Test #50: Controller.T14_TurnLeftEndsFrontAndLeftBlockedTurnsRight ...........***Failed    0.02 sec
+      Start 51: Controller.T15_TurnLeftEndsAllBlockedMovesBackward
+51/84 Test #51: Controller.T15_TurnLeftEndsAllBlockedMovesBackward .................***Failed    0.03 sec
+      Start 52: Controller.T16_TurnLeftEndsFrontClearReturnsForwardIgnoringDust
+52/84 Test #52: Controller.T16_TurnLeftEndsFrontClearReturnsForwardIgnoringDust ....***Failed    0.03 sec
+      Start 53: Controller.T17_TurnRightIgnoresFrontAndDustForTwoTicks
+53/84 Test #53: Controller.T17_TurnRightIgnoresFrontAndDustForTwoTicks .............***Failed    0.03 sec
+      Start 54: Controller.T18_TurnRightEndsFrontAndLeftBlockedReentersTurnRight
+54/84 Test #54: Controller.T18_TurnRightEndsFrontAndLeftBlockedReentersTurnRight ...***Failed    0.03 sec
+      Start 55: Controller.T19_TurnRightEndsFrontBlockedLeftFreeTurnsLeft
+55/84 Test #55: Controller.T19_TurnRightEndsFrontBlockedLeftFreeTurnsLeft ..........***Failed    0.03 sec
+      Start 56: Controller.T20_TurnRightEndsAllBlockedMovesBackward
+56/84 Test #56: Controller.T20_TurnRightEndsAllBlockedMovesBackward ................***Failed    0.02 sec
+      Start 57: Controller.T21_TurnRightEndsFrontClearReturnsForwardIgnoringDust
+57/84 Test #57: Controller.T21_TurnRightEndsFrontClearReturnsForwardIgnoringDust ...***Failed    0.03 sec
+      Start 58: Controller.T22_ReverseEndsLeftFreeTurnsLeft
+58/84 Test #58: Controller.T22_ReverseEndsLeftFreeTurnsLeft ........................***Failed    0.03 sec
+      Start 59: Controller.T23_ReverseEndsLeftBlockedRightFreeTurnsRight
+59/84 Test #59: Controller.T23_ReverseEndsLeftBlockedRightFreeTurnsRight ...........***Failed    0.02 sec
+      Start 60: Controller.T24_ReverseLastsAtLeastThreeTicksIgnoringInputs
+60/84 Test #60: Controller.T24_ReverseLastsAtLeastThreeTicksIgnoringInputs .........***Failed    0.03 sec
+      Start 61: Controller.T25_ReverseContinuesWhileBothSidesBlocked
+61/84 Test #61: Controller.T25_ReverseContinuesWhileBothSidesBlocked ...............***Failed    0.03 sec
+      Start 62: Controller.CL_C13_SideOnlyObstacleNoReactionInForwardStates
+62/84 Test #62: Controller.CL_C13_SideOnlyObstacleNoReactionInForwardStates ........***Failed    0.03 sec
+      Start 63: Controller.CL_C14_DustDuringPowerUpDoesNotRestart
+63/84 Test #63: Controller.CL_C14_DustDuringPowerUpDoesNotRestart ..................***Failed    0.03 sec
+      Start 64: Controller.CL_C28_DustAfterPowerUpEndsStartsNewPowerUpNextTick
+64/84 Test #64: Controller.CL_C28_DustAfterPowerUpEndsStartsNewPowerUpNextTick .....***Failed    0.03 sec
+      Start 65: Controller.CL_C29_DustOnTurnEndTickActedOnNextTick
+65/84 Test #65: Controller.CL_C29_DustOnTurnEndTickActedOnNextTick .................***Failed    0.03 sec
+      Start 66: Controller.CL_C10_DustIgnoredWhileReversingAndTurning
+66/84 Test #66: Controller.CL_C10_DustIgnoredWhileReversingAndTurning ..............***Failed    0.02 sec
+      Start 67: Controller.CL_C11_ObstacleCancelsPowerUpAndNextPowerUpIsFull
+67/84 Test #67: Controller.CL_C11_ObstacleCancelsPowerUpAndNextPowerUpIsFull .......***Failed    0.03 sec
+      Start 68: Controller.CNT01_TurnLastsExactlyThreeTicks
+68/84 Test #68: Controller.CNT01_TurnLastsExactlyThreeTicks ........................***Failed    0.03 sec
+      Start 69: Controller.CNT02_PowerUpLastsExactlyThreeTicks
+69/84 Test #69: Controller.CNT02_PowerUpLastsExactlyThreeTicks .....................***Failed    0.03 sec
+      Start 70: Controller.CNT03_ReverseMinimumThreeTicksEvenIfSideOpensAtOnce
+70/84 Test #70: Controller.CNT03_ReverseMinimumThreeTicksEvenIfSideOpensAtOnce .....***Failed    0.02 sec
+      Start 71: Controller.CNT04_ReverseCounterSaturatesBeyondUint8Range
+71/84 Test #71: Controller.CNT04_ReverseCounterSaturatesBeyondUint8Range ...........***Failed    0.03 sec
+      Start 72: Controller.CNT05_TurnCounterResetOnReentryRepeatedly
+72/84 Test #72: Controller.CNT05_TurnCounterResetOnReentryRepeatedly ...............***Failed    0.03 sec
+      Start 73: System.SYS01_StartupSendsForwardAndCleanOnOnceThenNothing
+73/84 Test #73: System.SYS01_StartupSendsForwardAndCleanOnOnceThenNothing ..........***Failed    0.04 sec
+      Start 74: System.INIT08_StartupResetsStoresAndInterfaces
+74/84 Test #74: System.INIT08_StartupResetsStoresAndInterfaces .....................***Failed    0.04 sec
+      Start 75: System.SYS02_FrontObstacleTurnLeftThreeTicksThenForward
+75/84 Test #75: System.SYS02_FrontObstacleTurnLeftThreeTicksThenForward ............***Failed    0.03 sec
+      Start 76: System.SYS03_InterruptActedOnAtNextTickOnly
+76/84 Test #76: System.SYS03_InterruptActedOnAtNextTickOnly ........................***Failed    0.04 sec
+      Start 77: System.SYS04_SidesSampledOnSameTickBeforeDecision
+77/84 Test #77: System.SYS04_SidesSampledOnSameTickBeforeDecision ..................***Failed    0.03 sec
+      Start 78: System.SYS05_AllBlockedReverseUntilSideOpensThenTurnThenForward
+78/84 Test #78: System.SYS05_AllBlockedReverseUntilSideOpensThenTurnThenForward ....***Failed    0.03 sec
+      Start 79: System.SYS06_TurnReentryDoesNotResendTurnLeft
+79/84 Test #79: System.SYS06_TurnReentryDoesNotResendTurnLeft ......................***Failed    0.04 sec
+      Start 80: System.SYS07_DustPowersUpForThreeTicks
+80/84 Test #80: System.SYS07_DustPowersUpForThreeTicks .............................***Failed    0.03 sec
+      Start 81: System.SYS08_ObstacleDuringPowerUpCancelsIt
+81/84 Test #81: System.SYS08_ObstacleDuringPowerUpCancelsIt ........................***Failed    0.03 sec
+      Start 82: System.SYS09_FrontFalseInterruptCausesNoAction
+82/84 Test #82: System.SYS09_FrontFalseInterruptCausesNoAction .....................   Passed    0.03 sec
+      Start 83: System.SYS10_TurnRightThenTurnLeftWhenLeftOpens
+83/84 Test #83: System.SYS10_TurnRightThenTurnLeftWhenLeftOpens ....................***Failed    0.03 sec
+      Start 84: CallHierarchy.CH01_MatchesStructureChart
+84/84 Test #84: CallHierarchy.CH01_MatchesStructureChart ...........................***Failed    0.18 sec
+
+4% tests passed, 81 tests failed out of 84
+
+Total Test time (real) =   7.35 sec
+
+The following tests FAILED:
+	  1 - Afferent.INIT01_ObstacleLocationInitIsAllFalse (Failed)
+	  2 - Afferent.INIT02_DustExistenceInitIsFalse (Failed)
+	  3 - Afferent.AFF01_LeftSensorReturnsPortValueOncePerCall (Failed)
+	  4 - Afferent.AFF02_RightSensorReturnsPortValueOncePerCall (Failed)
+	  5 - Afferent.AFF03_DustSensorReturnsPortValueOncePerCall (Failed)
+	  6 - Afferent.AFF04_FrontInterruptTrueSetsOnlyFront (Failed)
+	  7 - Afferent.AFF05_FrontInterruptFalseIsPassedOn (Failed)
+	  8 - Afferent.AFF06_SetSidesKeepsFront (Failed)
+	  9 - Afferent.AFF07_SetFrontKeepsSides (Failed)
+	 10 - Afferent.AFF08_DustExistenceStoresValue (Failed)
+	 11 - Afferent.AFF09_DetectOnTickSamplesEachOnceAndStores (Failed)
+	 12 - Interfaces.C12_01_MotorFirstSendIsWritten (Failed)
+	 13 - Interfaces.C12_02_MotorSameValueNotResent (Failed)
+	 14 - Interfaces.C12_03_MotorOnlyChangesWritten (Failed)
+	 15 - Interfaces.C12_04_MotorAllFourValues (Failed)
+	 16 - Interfaces.INIT03_MotorInitForgetsLastSent (Failed)
+	 17 - Interfaces.C12_05_CleanerFirstSendIsWritten (Failed)
+	 18 - Interfaces.C12_06_CleanerSameValueNotResent (Failed)
+	 19 - Interfaces.C12_07_CleanerOnlyChangesWritten (Failed)
+	 20 - Interfaces.INIT04_CleanerInitForgetsLastSent (Failed)
+	 22 - Actions.ACT01_MoveForwardEnableSendsForwardOnce (Failed)
+	 23 - Actions.ACT02_MoveForwardDisableSendsNothing (Failed)
+	 24 - Actions.ACT03_MoveBackwardEnableSendsBackwardOnce (Failed)
+	 25 - Actions.ACT04_MoveBackwardDisableSendsNothing (Failed)
+	 26 - Actions.ACT05_TurnLeftOnePerTrigger (Failed)
+	 27 - Actions.ACT06_TurnRightOnePerTrigger (Failed)
+	 28 - Actions.ACT07_CleanNormalSendsCleanOn (Failed)
+	 29 - Actions.ACT08_CleanOffSendsCleanOff (Failed)
+	 30 - Actions.ACT09_PowerUpCleanSendsCleanUp (Failed)
+	 31 - Avoidance.AV01_BothFreeTurnsLeft (Failed)
+	 32 - Avoidance.AV02_LeftFreeRightBlockedTurnsLeft (Failed)
+	 33 - Avoidance.AV03_LeftBlockedRightFreeTurnsRight (Failed)
+	 35 - Controller.T1_InitEnablesMoveForwardThenTriggersCleanNormal (Failed)
+	 36 - Controller.INIT07_InitResetsStateToFwdNormal (Failed)
+	 37 - Controller.T2_FwdNormalFrontBlockedLeftFreeTurnsLeft (Failed)
+	 38 - Controller.T2_LeftFirstWhenBothSidesFree (Failed)
+	 39 - Controller.T3_FwdNormalFrontAndLeftBlockedTurnsRight (Failed)
+	 40 - Controller.T4_FwdNormalAllBlockedMovesBackward (Failed)
+	 41 - Controller.T5_FwdNormalFrontClearNoDustNoSignalForAnySide (Failed)
+	 42 - Controller.T6_FwdNormalDustStartsPowerUp (Failed)
+	 43 - Controller.T7_PowerUpFrontBlockedLeftFreeCancelsAndTurnsLeft (Failed)
+	 44 - Controller.T8_PowerUpFrontAndLeftBlockedCancelsAndTurnsRight (Failed)
+	 45 - Controller.T9_PowerUpAllBlockedCancelsAndMovesBackward (Failed)
+	 46 - Controller.T10_PowerUpStaysForTwoTicksIgnoringDustAndSides (Failed)
+	 47 - Controller.T11_PowerUpEndsOnThirdTick (Failed)
+	 48 - Controller.T12_TurnLeftIgnoresFrontAndDustForTwoTicks (Failed)
+	 49 - Controller.T13_TurnLeftEndsFrontBlockedLeftFreeReentersTurnLeft (Failed)
+	 50 - Controller.T14_TurnLeftEndsFrontAndLeftBlockedTurnsRight (Failed)
+	 51 - Controller.T15_TurnLeftEndsAllBlockedMovesBackward (Failed)
+	 52 - Controller.T16_TurnLeftEndsFrontClearReturnsForwardIgnoringDust (Failed)
+	 53 - Controller.T17_TurnRightIgnoresFrontAndDustForTwoTicks (Failed)
+	 54 - Controller.T18_TurnRightEndsFrontAndLeftBlockedReentersTurnRight (Failed)
+	 55 - Controller.T19_TurnRightEndsFrontBlockedLeftFreeTurnsLeft (Failed)
+	 56 - Controller.T20_TurnRightEndsAllBlockedMovesBackward (Failed)
+	 57 - Controller.T21_TurnRightEndsFrontClearReturnsForwardIgnoringDust (Failed)
+	 58 - Controller.T22_ReverseEndsLeftFreeTurnsLeft (Failed)
+	 59 - Controller.T23_ReverseEndsLeftBlockedRightFreeTurnsRight (Failed)
+	 60 - Controller.T24_ReverseLastsAtLeastThreeTicksIgnoringInputs (Failed)
+	 61 - Controller.T25_ReverseContinuesWhileBothSidesBlocked (Failed)
+	 62 - Controller.CL_C13_SideOnlyObstacleNoReactionInForwardStates (Failed)
+	 63 - Controller.CL_C14_DustDuringPowerUpDoesNotRestart (Failed)
+	 64 - Controller.CL_C28_DustAfterPowerUpEndsStartsNewPowerUpNextTick (Failed)
+	 65 - Controller.CL_C29_DustOnTurnEndTickActedOnNextTick (Failed)
+	 66 - Controller.CL_C10_DustIgnoredWhileReversingAndTurning (Failed)
+	 67 - Controller.CL_C11_ObstacleCancelsPowerUpAndNextPowerUpIsFull (Failed)
+	 68 - Controller.CNT01_TurnLastsExactlyThreeTicks (Failed)
+	 69 - Controller.CNT02_PowerUpLastsExactlyThreeTicks (Failed)
+	 70 - Controller.CNT03_ReverseMinimumThreeTicksEvenIfSideOpensAtOnce (Failed)
+	 71 - Controller.CNT04_ReverseCounterSaturatesBeyondUint8Range (Failed)
+	 72 - Controller.CNT05_TurnCounterResetOnReentryRepeatedly (Failed)
+	 73 - System.SYS01_StartupSendsForwardAndCleanOnOnceThenNothing (Failed)
+	 74 - System.INIT08_StartupResetsStoresAndInterfaces (Failed)
+	 75 - System.SYS02_FrontObstacleTurnLeftThreeTicksThenForward (Failed)
+	 76 - System.SYS03_InterruptActedOnAtNextTickOnly (Failed)
+	 77 - System.SYS04_SidesSampledOnSameTickBeforeDecision (Failed)
+	 78 - System.SYS05_AllBlockedReverseUntilSideOpensThenTurnThenForward (Failed)
+	 79 - System.SYS06_TurnReentryDoesNotResendTurnLeft (Failed)
+	 80 - System.SYS07_DustPowersUpForThreeTicks (Failed)
+	 81 - System.SYS08_ObstacleDuringPowerUpCancelsIt (Failed)
+	 83 - System.SYS10_TurnRightThenTurnLeftWhenLeftOpens (Failed)
+	 84 - CallHierarchy.CH01_MatchesStructureChart (Failed)
+Errors while running CTest
+Output from these tests are in: C:/Users/mifdz/Downloads/261106_RVC_SASD_Claude/build/Testing/Temporary/LastTest.log
+Use "--rerun-failed --output-on-failure" to re-run the failed cases verbosely.

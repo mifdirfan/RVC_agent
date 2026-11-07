@@ -1,0 +1,9 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/Users/mifdz/Downloads/261106_RVC_SASD_Claude/build/cmake_install.cmake",
+		"C:/Users/mifdz/Downloads/261106_RVC_SASD_Claude/build/_deps/googletest-build/cmake_install.cmake",
+		"C:/Users/mifdz/Downloads/261106_RVC_SASD_Claude/build/_deps/googletest-build/googletest/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

@@ -1,0 +1,28 @@
+------------------------------------------------------------------------------
+                           GCC Code Coverage Report
+Directory: .
+------------------------------------------------------------------------------
+File                                      Branches    Taken  Cover   Missing
+------------------------------------------------------------------------------
+src/avoidance.c                                  4        4   100%
+src/clean_normal.c                               0        0    --%
+src/clean_off.c                                  0        0    --%
+src/cleaner_interface.c                          4        4   100%
+src/controller.c                                27       25    92%   55,156
+src/detection.c                                  0        0    --%
+src/dust_existence.c                             0        0    --%
+src/dust_sensor.c                                0        0    --%
+src/front_sensor.c                               0        0    --%
+src/left_sensor.c                                0        0    --%
+src/motor_interface.c                            4        4   100%
+src/move_backward.c                              0        0    --%
+src/move_forward.c                               0        0    --%
+src/obstacle_location.c                          0        0    --%
+src/power_up_clean.c                             0        0    --%
+src/right_sensor.c                               0        0    --%
+src/rvc.c                                        0        0    --%
+src/turn_left.c                                  0        0    --%
+src/turn_right.c                                 0        0    --%
+------------------------------------------------------------------------------
+TOTAL                                           39       37    94%
+------------------------------------------------------------------------------

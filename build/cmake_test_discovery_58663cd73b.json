@@ -1,0 +1,57 @@
+{
+  "tests": 9,
+  "name": "AllTests",
+  "testsuites": [
+    {
+      "name": "Interfaces",
+      "tests": 9,
+      "testsuite": [
+        {
+          "name": "C12_01_MotorFirstSendIsWritten",
+          "file": "C:\\Users\\mifdz\\Downloads\\261106_RVC_SASD_Claude\\tests\\test_interfaces.cpp",
+          "line": 37
+        },
+        {
+          "name": "C12_02_MotorSameValueNotResent",
+          "file": "C:\\Users\\mifdz\\Downloads\\261106_RVC_SASD_Claude\\tests\\test_interfaces.cpp",
+          "line": 45
+        },
+        {
+          "name": "C12_03_MotorOnlyChangesWritten",
+          "file": "C:\\Users\\mifdz\\Downloads\\261106_RVC_SASD_Claude\\tests\\test_interfaces.cpp",
+          "line": 53
+        },
+        {
+          "name": "C12_04_MotorAllFourValues",
+          "file": "C:\\Users\\mifdz\\Downloads\\261106_RVC_SASD_Claude\\tests\\test_interfaces.cpp",
+          "line": 64
+        },
+        {
+          "name": "INIT03_MotorInitForgetsLastSent",
+          "file": "C:\\Users\\mifdz\\Downloads\\261106_RVC_SASD_Claude\\tests\\test_interfaces.cpp",
+          "line": 75
+        },
+        {
+          "name": "C12_05_CleanerFirstSendIsWritten",
+          "file": "C:\\Users\\mifdz\\Downloads\\261106_RVC_SASD_Claude\\tests\\test_interfaces.cpp",
+          "line": 84
+        },
+        {
+          "name": "C12_06_CleanerSameValueNotResent",
+          "file": "C:\\Users\\mifdz\\Downloads\\261106_RVC_SASD_Claude\\tests\\test_interfaces.cpp",
+          "line": 92
+        },
+        {
+          "name": "C12_07_CleanerOnlyChangesWritten",
+          "file": "C:\\Users\\mifdz\\Downloads\\261106_RVC_SASD_Claude\\tests\\test_interfaces.cpp",
+          "line": 100
+        },
+        {
+          "name": "INIT04_CleanerInitForgetsLastSent",
+          "file": "C:\\Users\\mifdz\\Downloads\\261106_RVC_SASD_Claude\\tests\\test_interfaces.cpp",
+          "line": 112
+        }
+      ]
+    }
+  ]
+}

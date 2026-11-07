@@ -1,0 +1,28 @@
+------------------------------------------------------------------------------
+                           GCC Code Coverage Report
+Directory: .
+------------------------------------------------------------------------------
+File                                         Lines     Exec  Cover   Missing
+------------------------------------------------------------------------------
+src/avoidance.c                                  6        6   100%
+src/clean_normal.c                               3        3   100%
+src/clean_off.c                                  3        3   100%
+src/cleaner_interface.c                         10       10   100%
+src/controller.c                                85       85   100%
+src/detection.c                                  7        7   100%
+src/dust_existence.c                             8        8   100%
+src/dust_sensor.c                                2        2   100%
+src/front_sensor.c                               3        3   100%
+src/left_sensor.c                                2        2   100%
+src/motor_interface.c                           10       10   100%
+src/move_backward.c                             10       10   100%
+src/move_forward.c                              10       10   100%
+src/obstacle_location.c                         14       14   100%
+src/power_up_clean.c                             3        3   100%
+src/right_sensor.c                               2        2   100%
+src/rvc.c                                       13       13   100%
+src/turn_left.c                                  3        3   100%
+src/turn_right.c                                 3        3   100%
+------------------------------------------------------------------------------
+TOTAL                                          197      197   100%
+------------------------------------------------------------------------------

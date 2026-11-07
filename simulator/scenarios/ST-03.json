@@ -1,0 +1,80 @@
+{
+  "id": "ST-03",
+  "name": "Left-priority turn at a single front obstacle",
+  "start": {
+    "x": 4,
+    "y": 4,
+    "dir": "N"
+  },
+  "obstacles": [
+    [
+      4,
+      1
+    ]
+  ],
+  "dust": [],
+  "max_ticks": 20,
+  "functions": [
+    "EF-03",
+    "EF-06",
+    "EF-08",
+    "EF-09",
+    "EF-16"
+  ],
+  "requirements": [
+    "R3",
+    "C1",
+    "C3",
+    "C4",
+    "C5",
+    "C8",
+    "C15",
+    "C18",
+    "C19",
+    "C20",
+    "C25"
+  ],
+  "fsm": [
+    "T2",
+    "T12",
+    "T16"
+  ],
+  "events": [
+    "Front Sensor Input",
+    "Left/Right Sensor Input",
+    "Direction",
+    "Clean"
+  ],
+  "ps": [
+    "1.1",
+    "1.5",
+    "2.1.1",
+    "2.1.2",
+    "2.1.3",
+    "2.1.6",
+    "2.1.7",
+    "2.2",
+    "2.3"
+  ],
+  "expected": [
+    "Ticks 1-2: forward to (4,2).",
+    "Tick 3: obstacle (4,1) ahead: front interrupt F = true. Left (3,2) and right (5,2) are both free, so the RVC turns LEFT (C4): Disable Move Forward, Clean = clean_off, Direction = Turn Left.",
+    "Ticks 4-5: still turning, no outputs; F stays true and is not acted on (C15). Heading W at end of tick 5.",
+    "Tick 6: front interrupt F = false; Direction = Forward, Clean = clean_on. The RVC moves W along row 2.",
+    "Tick 10: wall ahead at (0,2), left (S) free: another left turn."
+  ],
+  "key_ticks": [
+    2,
+    3,
+    5,
+    6,
+    10
+  ],
+  "function_text": [
+    "EF-03 – Front obstacle detection by interrupt (walls and obstacles); false only updates the store",
+    "EF-06 – Avoidance: turn left, left has priority when both sides are free",
+    "EF-08 – 3-tick turn, then resume forward with clean_on",
+    "EF-09 – Cleaning stopped (clean_off) only while turning or reversing",
+    "EF-16 – Front interrupt during a turn or reverse is not acted on"
+  ]
+}

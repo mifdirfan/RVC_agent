@@ -1,0 +1,65 @@
+{
+  "id": "ST-08",
+  "name": "Custom start on the left wall, right turn in the corner",
+  "start": {
+    "x": 0,
+    "y": 4,
+    "dir": "N"
+  },
+  "obstacles": [],
+  "dust": [],
+  "max_ticks": 20,
+  "functions": [
+    "EF-05",
+    "EF-03",
+    "EF-07",
+    "EF-08"
+  ],
+  "requirements": [
+    "R2",
+    "R3",
+    "C1",
+    "C4",
+    "C5",
+    "C13"
+  ],
+  "fsm": [
+    "T5",
+    "T3",
+    "T17",
+    "T21"
+  ],
+  "events": [
+    "Front Sensor Input",
+    "Left Sensor Input",
+    "Direction",
+    "Clean"
+  ],
+  "ps": [
+    "1.1",
+    "1.2",
+    "1.5",
+    "2.1.1",
+    "2.1.4",
+    "2.2",
+    "2.3"
+  ],
+  "expected": [
+    "Start is not the centre (custom start (0,4) facing N).",
+    "Ticks 1-4: the wall on the left gives L = true each tick; no reaction (C13). The RVC moves to (0,0).",
+    "Tick 5: F = true (wall) and L = true (wall), R = false: Direction = Turn Right, Clean = clean_off.",
+    "Tick 8: Forward + clean_on heading E; L stays true along the top wall without reaction."
+  ],
+  "key_ticks": [
+    1,
+    4,
+    5,
+    8
+  ],
+  "function_text": [
+    "EF-05 – Side-only obstacle with front clear causes no reaction",
+    "EF-03 – Front obstacle detection by interrupt (walls and obstacles); false only updates the store",
+    "EF-07 – Avoidance: turn right when the left is blocked",
+    "EF-08 – 3-tick turn, then resume forward with clean_on"
+  ]
+}

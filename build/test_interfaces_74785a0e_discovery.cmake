@@ -1,0 +1,20 @@
+include("C:/Program Files/CMake/share/cmake-4.4/Modules/GoogleTestAddTests.cmake")
+gtest_discover_tests_impl(
+  TEST_TARGET [==[test_interfaces]==]
+  TEST_EXECUTABLE [==[C:/Users/mifdz/Downloads/261106_RVC_SASD_Claude/build/test_interfaces.exe]==]
+  TEST_EXECUTOR [==[]==]
+  TEST_WORKING_DIR [==[C:/Users/mifdz/Downloads/261106_RVC_SASD_Claude/build]==]
+  TEST_EXTRA_ARGS [==[]==]
+  TEST_PROPERTIES [==[]==]
+  TEST_PREFIX [==[]==]
+  TEST_SUFFIX [==[]==]
+  TEST_FILTER [==[]==]
+  NO_PRETTY_TYPES [==[FALSE]==]
+  NO_PRETTY_VALUES [==[FALSE]==]
+  TEST_LIST [==[test_interfaces_TESTS]==]
+  CTEST_FILE [==[C:/Users/mifdz/Downloads/261106_RVC_SASD_Claude/build/test_interfaces_74785a0e_tests.cmake]==]
+  TEST_DISCOVERY_TIMEOUT [==[5]==]
+  TEST_DISCOVERY_EXTRA_ARGS [==[]==]
+  TEST_XML_OUTPUT_DIR [==[]==]
+  TEST_JSON_OUTPUT_DIR [==[C:/Users/mifdz/Downloads/261106_RVC_SASD_Claude/build]==]
+)

@@ -1,0 +1,90 @@
+{
+  "id": "ST-10",
+  "name": "Dust trail: no restart during power-up, new power-up afterwards",
+  "start": {
+    "x": 0,
+    "y": 4,
+    "dir": "E"
+  },
+  "obstacles": [],
+  "dust": [
+    [
+      1,
+      4
+    ],
+    [
+      2,
+      4
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      4
+    ],
+    [
+      5,
+      4
+    ]
+  ],
+  "max_ticks": 20,
+  "functions": [
+    "EF-12",
+    "EF-13",
+    "EF-04",
+    "EF-17"
+  ],
+  "requirements": [
+    "R5",
+    "C6",
+    "C12",
+    "C14",
+    "C17",
+    "C28"
+  ],
+  "fsm": [
+    "T6",
+    "T10",
+    "T11",
+    "T6",
+    "T2"
+  ],
+  "events": [
+    "Dust Sensor Input",
+    "Tick",
+    "Clean"
+  ],
+  "ps": [
+    "1.4",
+    "1.6",
+    "2.1.1",
+    "2.1.8",
+    "2.1.6",
+    "2.3"
+  ],
+  "expected": [
+    "Custom start (0,4) facing E.",
+    "Tick 2: dust at (1,4): Clean = clean_up.",
+    "Ticks 3-4: dust is detected again but the power-up is not restarted: no Clean write, counter keeps counting (C14).",
+    "Tick 5: power-up ends: Clean = clean_on, even though dust is detected on that tick (C28).",
+    "Tick 6: dust at (5,4) on a later tick: a NEW power-up starts, Clean = clean_up (C28).",
+    "Tick 9: Clean = clean_on. Tick 10: wall at (9,4): Turn Left + clean_off."
+  ],
+  "key_ticks": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    9,
+    10
+  ],
+  "function_text": [
+    "EF-12 – Dust: power-up (clean_up) for 3 ticks, then back to clean_on",
+    "EF-13 – Dust during an active power-up does not restart it; dust after the end starts a new one",
+    "EF-04 – Periodic left/right/dust sampling, once per tick",
+    "EF-17 – Direction and Clean are sent only when their value changes; signals only on transitions"
+  ]
+}

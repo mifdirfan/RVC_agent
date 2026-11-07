@@ -78,7 +78,7 @@ and caller-callee relationships.
 - include/
 - tests/
 - CMakeLists.txt
-- artifacts/Implementation/module_traceability.md
+- artifacts/TDD/module_traceability.md
 - artifacts/TDD/unit_test_cases.md
 - artifacts/TDD/test_execution_results.md
 - artifacts/TDD/coverage_report.md

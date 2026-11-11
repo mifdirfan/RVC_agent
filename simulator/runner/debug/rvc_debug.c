@@ -2,6 +2,8 @@
  * @file rvc_debug.c
  * @brief Assembles the read-only debug view (rvc_debug.h).
  */
+#include <stddef.h>
+
 #include "rvc_debug.h"
 #include "obstacle_location.h"
 #include "dust_existence.h"
